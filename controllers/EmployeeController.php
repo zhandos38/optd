@@ -10,6 +10,7 @@ namespace app\controllers;
 
 
 use app\models\Employee;
+use app\models\Rating;
 use yii\web\Controller;
 
 class EmployeeController extends Controller
@@ -23,6 +24,11 @@ class EmployeeController extends Controller
     public function actionView($id)
     {
         $model = Employee::findOne(['id' => $id]);
-        return $this->render('view', ['model' => $model]);
+
+        $rating = new Rating();
+        return $this->render('view', [
+            'model' => $model,
+            'ratingModel' => $rating
+        ]);
     }
 }

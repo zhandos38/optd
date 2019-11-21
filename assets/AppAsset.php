@@ -22,8 +22,10 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/fontawesome.css',
         'css/site.css',
+        'css/jquery.ml-keyboard.css'
     ];
     public $js = [
+        'js/jquery.ml-keyboard.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

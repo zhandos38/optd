@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\AdmissionSearch;
+use app\models\Department;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -100,24 +102,6 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
      * Displays about page.
      *
      * @return string
@@ -127,133 +111,17 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionSupport()
+    public function actionAdmission()
     {
-        return $this->render('support');
-    }
+        $searchModel = new AdmissionSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionOurServices()
-    {
-        return $this->render('our-services');
-    }
+        $departments = Department::find()->all();
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionInsurance()
-    {
-        return $this->render('insurance');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionGuarantee()
-    {
-        return $this->render('guarantee');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionHealthCodex()
-    {
-        return $this->render('health-codex');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionDisease()
-    {
-        return $this->render('disease');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAmbulance()
-    {
-        return $this->render('ambulance');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionOrganization()
-    {
-        return $this->render('organization');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionInspection()
-    {
-        return $this->render('inspection');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionDirection()
-    {
-        return $this->render('direction');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionMedicineHelp()
-    {
-        return $this->render('medicine-help');
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionPaidServices()
-    {
-        return $this->render('paid-services');
-    }
-	
-	 /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionServiceZone()
-    {
-        return $this->render('service-zone');
+        return $this->render('admission', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'departments' => $departments
+        ]);
     }
 }
