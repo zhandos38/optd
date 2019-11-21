@@ -1,0 +1,466 @@
+html,
+body {
+    height: 100%;
+    background: url("/img/background3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+/* Header */
+.header {
+    height: 72px;
+    background-color: #222d32;
+    padding-top: 20px;
+}
+.header__lang {
+	margin-top: 5px;
+}
+.header__name {
+    color: #fff;
+    font-size: 22px;
+}
+.select-lang__link {
+    text-decoration: unset;
+    padding: 10px;
+    background: #33b5e5;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+	font-size: 16px;
+}
+.select-lang__link:hover {
+    text-decoration: unset;
+    color: #fff;
+    opacity: 0.8;
+}
+.select-lang__link:focus {
+    text-decoration: unset;
+    color: #fff;
+    opacity: 0.8;
+}
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-menu__item-wrapper {
+    width: 100%;
+}
+.main-menu__item-link {
+    text-decoration: unset;
+}
+.main-menu__item-link:hover {
+    text-decoration: unset;
+}
+.main-menu__item {
+	padding-top: 36px;
+    padding-bottom: 36px;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.25)!important;
+    background: #33b5e5;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.main-menu__item:hover {
+    opacity: 0.8;
+}
+.main-menu__item:focus {
+    opacity: 0.8;
+}
+
+/* Employee */
+.employee-list__item-wrapper {
+    width: 100%;
+}
+.employee-list__item-link {
+    text-decoration: unset;
+}
+.employee-list__item-link:hover {
+    text-decoration: unset;
+}
+.employee-list__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.25)!important;
+    background: #33b5e5;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.employee-list__item:hover {
+    opacity: 0.8;
+}
+.employee-list__item:focus {
+    opacity: 0.8;
+}
+.employee-card__info-wrapper {
+    display: flex;
+}
+.employee-card__image-wrapper {
+    width: 25%;
+}
+.employee-card__image {
+    width: 100%;
+}
+.employee-card__info {
+    margin-left: 20px;
+}
+.employee-card__full-name {
+    font-size: 28px;
+}
+.employee-card__position {
+    font-size: 18px;
+    margin-top: 5px;
+}
+.employee-card__cabinet {
+    font-size: 18px;
+}
+.employee-card__schedule {
+    margin-top: 40px;
+}
+
+/* Buttons */
+.buttons-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+.go-home-button__link {
+    text-decoration: unset;
+}
+.go-home-button__link:hover {
+    text-decoration: unset;
+}
+.go-home-button {
+    padding: 20px;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.25)!important;
+    background: #33b5e5;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    margin-right: 10px;
+}
+.go-home-button:hover {
+    opacity: 0.8;
+}
+.go-home-button:focus {
+    opacity: 0.8;
+}
+.back-button__link {
+    text-decoration: unset;
+}
+.back-button__link:hover {
+    text-decoration: unset;
+}
+.back-button {
+    padding: 20px;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.25)!important;
+    background: #33b5e5;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.back-button:hover {
+    opacity: 0.8;
+}
+.back-button:focus {
+    opacity: 0.8;
+}
+
+.employee-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.support-center__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.support-center__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.our-services__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.our-services__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.guarantee__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.guarantee__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.insurance__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.insurance__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.health-codex__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.health-codex__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.disease__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.disease__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.ambulance__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.ambulance__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.organization__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.organization__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.inspection__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.inspection__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.direction__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.direction__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.medicine-help__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.medicine-help__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.paid-services__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.paid-services__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.service-zone__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.service-zone__content {
+	font-size: 16px;
+    line-height: 1.8;
+}
+
+.direction__image-wrapper {
+	float: left;
+	width: 50%;
+	margin-bottom: 20px;
+    margin-right: 20px;
+}
+.direction__image {
+	width: 100%;
+}
