@@ -28,7 +28,7 @@ AppAsset::register($this);
 <header class="header">
     <div class="container" style="display: flex; justify-content: space-between">
         <div class="header__name">
-            ГКП на ПХВ  «Городская поликлиника №7» УЗ города Шымкент
+            <?= Yii::t('site', 'ГКП на ПХВ "Областной противотуберкулезный диспансер"') ?>
         </div>
         <div class="header__lang">
             <?= $this->render('select-language') ?>

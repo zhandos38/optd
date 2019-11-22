@@ -70,7 +70,7 @@ $this->title = 'График врача';
         <h2>
             Оставить оценку
         </h2>
-        <?php $form = \yii\widgets\ActiveForm::begin() ?>
+        <?php $form = \yii\widgets\ActiveForm::begin(['id' => 'rating-form']) ?>
 
             <?= $form->field($ratingModel, 'value')->widget(\kartik\rating\StarRating::className(), [
             'pluginOptions' => [
@@ -87,7 +87,9 @@ $this->title = 'График врача';
 
         <?= $form->field($ratingModel, 'comment')->textarea() ?>
 
-        <?= $form->field($ratingModel, 'iin')->textInput() ?>
+        <?= $form->field($ratingModel, 'iin')->textInput(['id' => 'rating-form-iin']) ?>
+
+        <div id="res"></div>
 
         <div class="form-group">
             <?= Html::submitButton(Yii::t('site', 'Отправить'), ['class' => 'btn btn-success']) ?>
@@ -97,3 +99,66 @@ $this->title = 'График врача';
 
     </div>
 </div>
+<?php
+$js =<<<JS
+
+$('form#rating-form').on('beforeSubmit', function(e) {
+        let ch = $('#rating-form-iin').val();
+        let res = iin(ch);
+        
+        if(ch.length !== 12) 
+        {
+            $('#res').html('<font color="red">Длина РНН/ИНН должна быть 12 символов</font>');
+            return false;
+        }
+        
+        if(! /^\d+$/.test(ch))
+        {
+            $('#res').html('<font color="red">В ИНН содержатся только цифры</font>');
+            return false;    
+        }
+        
+        if ( !res[0] )
+        {
+            $('#res').html(res[1]);
+            return false;
+        }
+});
+
+
+
+function iin(iin)
+{
+    let s = 0, i, k, t;
+    let nn = iin.split('');
+    for (i = 0; i < 11; i++)
+    {
+        s = s + (i + 1) * nn[i];
+    }
+    k = s % 11;
+    if (k == 10)
+    {
+        s = 0;
+        for (i = 0; i < 11; i++)
+        {
+            t = (i + 3) % 11;
+            if(t == 0)
+            {
+                t = 11;
+            }
+            s = s + t * nn[i];
+        }
+        k = s % 11;
+        if (k == 10)
+            return [false, '<font color="red">ИИН не должен использоваться, ошибки при формировании контрольного разряда</font>'];
+        return [(k == iin.substr(11, 1)), '<font color="red">Контрольный разряд ИИН неверный, должно быть ' + k + ', а стоит ' + iin.substr(11, 1) +'</font>' ];
+    }
+    return [(k == iin.substr(11, 1)), '<font color="red">Контрольный разряд ИИН неверный, должно быть ' + k + ', а стоит ' + iin.substr(11, 1) +'</font>'];    
+}
+
+    
+JS;
+
+$this->registerJs($js);
+
+?>

@@ -11,6 +11,7 @@ namespace app\controllers;
 
 use app\models\Employee;
 use app\models\Rating;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 
 class EmployeeController extends Controller
@@ -24,8 +25,15 @@ class EmployeeController extends Controller
     public function actionView($id)
     {
         $model = Employee::findOne(['id' => $id]);
-
         $rating = new Rating();
+
+        if ($rating->load(\Yii::$app->request->post())) {
+            $rating->employee_id = $id;
+            $rating->save();
+
+            $rating = new Rating();
+        }
+
         return $this->render('view', [
             'model' => $model,
             'ratingModel' => $rating

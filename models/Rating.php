@@ -27,6 +27,15 @@ class Rating extends \yii\db\ActiveRecord
         return 'rating';
     }
 
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => 'yii\behaviors\TimestampBehavior',
+            ]
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -38,6 +47,7 @@ class Rating extends \yii\db\ActiveRecord
             [['comment'], 'string'],
             [['iin'], 'string', 'max' => 255],
             [['employee_id'], 'exist', 'skipOnError' => true, 'targetClass' => Employee::className(), 'targetAttribute' => ['employee_id' => 'id']],
+            ['value', 'required']
         ];
     }
 
@@ -48,7 +58,7 @@ class Rating extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'employee_id' => 'Employee ID',
+            'employee_id' => 'Врачи',
             'value' => Yii::t('site', 'Оценка'),
             'comment' => Yii::t('site', 'Комментарий'),
             'iin' => Yii::t('site', 'ИИН'),

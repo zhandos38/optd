@@ -6,6 +6,7 @@ use app\models\AdmissionSearch;
 use app\models\Department;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
@@ -116,6 +117,8 @@ class SiteController extends Controller
         $searchModel = new AdmissionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+//        VarDumper::dump($dataProvider->getModels(),10,1); die;
+
         $departments = Department::find()->all();
 
         return $this->render('admission', [
@@ -123,5 +126,25 @@ class SiteController extends Controller
             'dataProvider' => $dataProvider,
             'departments' => $departments
         ]);
+    }
+
+    public function actionHistory()
+    {
+        return $this->render('history');
+    }
+
+    public function actionOurServices()
+    {
+        return $this->render('our-services');
+    }
+
+    public function actionInsurance()
+    {
+        return $this->render('insurance');
+    }
+
+    public function actionDirection()
+    {
+        return $this->render('direction');
     }
 }

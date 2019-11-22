@@ -11,9 +11,11 @@ use yii\base\Model;
 </style>
 <div class="site-index">
     <div class="container">
-        <?= $this->render('_search', [
-            'searchModel' => $searchModel,
-        ]) ?>
+        <div>
+            <?= $this->render('_search', [
+                'searchModel' => $searchModel,
+            ]) ?>
+        </div>
 
         <?php if ($searchModel->attributes['full_name'] || $searchModel->attributes['department_id']): ?>
 

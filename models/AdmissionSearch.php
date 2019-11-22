@@ -10,6 +10,7 @@ use yii\helpers\VarDumper;
 
 /**
  * AdmissionSearch represents the model behind the search form of `app\models\Admission`.
+ * @property int $department_id [int(11)]
  */
 class AdmissionSearch extends Admission
 {

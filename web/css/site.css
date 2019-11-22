@@ -1,7 +1,8 @@
 html,
 body {
     height: 100%;
-    background: url("/img/background3.jpg") no-repeat;
+    background: url("/img/background.jpg") no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -298,173 +299,6 @@ a.desc:after {
     justify-content: center;
 }
 
-.support-center__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.support-center__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.our-services__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.our-services__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.guarantee__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.guarantee__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.insurance__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.insurance__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.health-codex__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.health-codex__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.disease__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.disease__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.ambulance__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.ambulance__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.organization__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.organization__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.inspection__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.inspection__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.direction__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.direction__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-
-.medicine-help__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.medicine-help__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.paid-services__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.paid-services__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.service-zone__name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.service-zone__content {
-	font-size: 16px;
-    line-height: 1.8;
-}
-
-.direction__image-wrapper {
-	float: left;
-	width: 50%;
-	margin-bottom: 20px;
-    margin-right: 20px;
-}
-.direction__image {
-	width: 100%;
-}
-
 .accordion {
     background-color: #eee;
     color: #444;
@@ -487,4 +321,68 @@ a.desc:after {
     display: none;
     background-color: white;
     overflow: hidden;
+}
+
+.history__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.history__content {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.our-services__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.our-services__content {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+.insurance__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.insurance__content {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.direction__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.direction__content {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+.direction__item {
+    display: inline-block;
+}
+.direction__image-wrapper {
+    float: left;
+    padding: 0 10px 10px 0;
+}
+.direction__image {
+    width: 250px;
 }
