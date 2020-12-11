@@ -110,9 +110,15 @@ a.desc:after {
 
 /* Header */
 .header {
-    height: 72px;
-    background-color: #222d32;
+    height: 136px;
+    background-color: #337ab7;
     padding-top: 20px;
+}
+.header__symbol {
+    width: 80px;
+}
+.header__content {
+    padding-top: 12px;
 }
 .header__lang {
 	margin-top: 5px;
@@ -120,6 +126,7 @@ a.desc:after {
 .header__name {
     color: #fff;
     font-size: 22px;
+    text-transform: uppercase;
 }
 .select-lang__link {
     text-decoration: unset;

@@ -27,8 +27,16 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <header class="header">
     <div class="container" style="display: flex; justify-content: space-between">
-        <div class="header__name">
-            <?= Yii::t('site', 'ГКП на ПХВ "Областной противотуберкулезный диспансер"') ?>
+        <div>
+            <img class="header__symbol" src="/img/symbol.png" alt="">
+        </div>
+        <div class="header__content">
+            <div class="header__name">
+                <?= Yii::t('site', '"Управление здравохранения города Шымкент"') ?>
+            </div>
+            <div class="header__name">
+                <?= Yii::t('site', 'Добро пожаловать в ГКП на ПХВ "Городская поликлиника №3"') ?>
+            </div>
         </div>
         <div class="header__lang">
             <?= $this->render('select-language') ?>
@@ -47,7 +55,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">Powered by Itb-group</p>
+        <p class="pull-left">Powered by Itb-group.kz - +7(702)184-42-95</p>
     </div>
 </footer>
 

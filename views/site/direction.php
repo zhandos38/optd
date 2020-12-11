@@ -22,24 +22,52 @@
                 </div>
             </div>
             <hr>
+        </div>
+		<div class="direction__content">
             <div class="direction__item">
                 <div class="direction__image-wrapper">
-                    <img src="/img/zam-doctor.jpg" alt="direction" class="direction__image">
+                    <img src="/img/zam1.jpg" alt="direction" class="direction__image">
                 </div>
                 <div class="direction__description">
-                    Заместитель главного врача по лечебно-профилактической работе – Косыбаева Чырын Жабыковна 01.09.1970 г.р. закончила Карагандиский государственный медицинский институт 1993 г. лечебное дело, стаж 20 лет.
+                    Кудайбергенов Ишанбай Рыскулбекович - Заместитель главного врача по лечебной 
                 </div>
             </div>
             <hr>
+        </div>
+		<div class="direction__content">
             <div class="direction__item">
                 <div class="direction__image-wrapper">
-                    <img src="/img/zam-doctor2.jpg" alt="direction" class="direction__image">
+                    <img src="/img/zam2.jpg" alt="direction" class="direction__image">
                 </div>
                 <div class="direction__description">
-                    Заместитель главного врача по качеству – Сейтханов Мухитдин Абуович 10.12.1964 г.р. закончил Актюбинский государственный медицинский институт1993 г. лечебное дело, стаж 26 лет.
+                    Нуржанов Галымжан Калмуратович - Заместитель главного врача по организационо-методической
                 </div>
             </div>
+            <hr>
         </div>
+		<div class="direction__content">
+            <div class="direction__item">
+                <div class="direction__image-wrapper">
+                    <img src="/img/zam3.jpg" alt="direction" class="direction__image">
+                </div>
+                <div class="direction__description">
+                    Капанова Карлыгаш Аширметовна - Заместитель главного врача по контролю качества медицинских
+                </div>
+            </div>
+            <hr>
+        </div>
+		<div class="direction__content">
+            <div class="direction__item">
+                <div class="direction__image-wrapper">
+                    <img src="/img/zam4.jpg" alt="direction" class="direction__image">
+                </div>
+                <div class="direction__description">
+                    Алиев Жанғали Арапханович - Заместитель главного врача по делам экономического и административно-хозяйственного
+                </div>
+            </div>
+            <hr>
+        </div>
+	
     <?php else: ?>
         <div class="direction__name">
             Әкімшілік
@@ -54,23 +82,6 @@
                 </div>
             </div>
             <hr>
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam-doctor.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Бас дәрігердің емдеу-профилактикалық  жұмыстары бойынша орынбасары – Қосыбаева Шырын Жабыковна  01.09.1970 ж.т.  1993 ж. Қарағанды мемлекеттік медицина институтының емдеу ісі мамандығын бітірген, жұмыс өтілі 20 жыл
-                </div>
-            </div>
-            <hr>
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam-doctor2.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Бас дәрігердің медицина сапасын бақылау жұмыстары бойынша орынбасары – Сейтханов Мухитдин Әбуович  10.12.1964 ж.т.  1993 ж. Ақтөбе мемлекеттік медицина институтының емдеу ісі мамандығын бітірген, жұмыс өтілі 26 жыл
-                </div>
-            </div>
         </div>
     <?php endif; ?>
 </div>
