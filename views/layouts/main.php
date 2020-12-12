@@ -25,16 +25,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<header class="header">
-    <div class="container" style="display: flex; justify-content: space-between">
-        <div class="header__name">
-            <?= Yii::t('site', 'ГКП на ПХВ "Областной противотуберкулезный диспансер"') ?>
-        </div>
-        <div class="header__lang">
-            <?= $this->render('select-language') ?>
-        </div>
-    </div>
-</header>
+<?= $this->render('_header') ?>
 <div class="wrap">
     <div class="container" style="background-color: #fff;">
         <?= Breadcrumbs::widget([

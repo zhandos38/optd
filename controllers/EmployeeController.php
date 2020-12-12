@@ -9,6 +9,7 @@
 namespace app\controllers;
 
 
+use app\models\Department;
 use app\models\Employee;
 use app\models\Rating;
 use yii\helpers\VarDumper;
@@ -18,8 +19,14 @@ class EmployeeController extends Controller
 {
     public function actionIndex()
     {
-        $models = Employee::find()->all();
-        return $this->render('index', ['models' => $models]);
+        $departments = Department::find()->all();
+        return $this->render('index', ['departments' => $departments]);
+    }
+
+    public function actionList($id)
+    {
+        $models = Employee::findAll(['department_id' => $id]);
+        return $this->render('list', ['models' => $models]);
     }
 
     public function actionView($id)

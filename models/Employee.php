@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "employee".
@@ -10,6 +11,7 @@ use Yii;
  * @property int $id
  * @property string $full_name
  * @property int $position_id
+ * @property int $department_id
  * @property string $cabinet
  * @property string $image
  * @property int $created_at
@@ -20,8 +22,10 @@ use Yii;
  * @property string $thursday [varchar(100)]
  * @property string $friday [varchar(100)]
  * @property string $saturday [varchar(100)]
- * @property mixed $position
  * @property string $sunday [varchar(100)]
+ *
+ * @property Position $position
+ * @property Department $department
  */
 class Employee extends \yii\db\ActiveRecord
 {
@@ -31,7 +35,7 @@ class Employee extends \yii\db\ActiveRecord
     {
         return [
             'timestamp' => [
-                'class' => 'yii\behaviors\TimestampBehavior',
+                'class' => TimestampBehavior::className(),
             ]
         ];
     }
@@ -50,7 +54,7 @@ class Employee extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['position_id', 'created_at', 'updated_at'], 'integer'],
+            [['position_id', 'department_id', 'created_at', 'updated_at'], 'integer'],
             [['full_name', 'cabinet', 'image'], 'string', 'max' => 255],
             [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'], 'string'],
             [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg']
@@ -65,6 +69,7 @@ class Employee extends \yii\db\ActiveRecord
         return [
             'full_name' => Yii::t('site', 'Полное имя'),
             'position_id' => Yii::t('site', 'Должность'),
+            'department_id' => Yii::t('site', 'Отделение'),
             'cabinet' => Yii::t('site', 'Кабинет'),
             'image' => Yii::t('site', 'Рисунок'),
             'created_at' => Yii::t('site', 'Добавлено в'),
@@ -80,9 +85,20 @@ class Employee extends \yii\db\ActiveRecord
         ];
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getPosition()
     {
         return $this->hasOne(Position::className(), ['id' => 'position_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDepartment()
+    {
+        return $this->hasOne(Department::className(), ['id' => 'department_id']);
     }
 
     public function upload()

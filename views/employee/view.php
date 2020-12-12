@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\Url;
 use yii\web\JsExpression;
 use yii\helpers\Html;
 /* @var $model \app\models\Employee */
@@ -23,7 +24,7 @@ $this->title = 'График врача';
             </a>
         </div>
         <div class="back-button__wrapper">
-            <a href="<?= \yii\helpers\Url::to(['employee/index']) ?>" class="back-button__link">
+            <a href="<?= Url::to(['employee/list', 'id' => $model->department_id]) ?>" class="back-button__link">
                 <div class="back-button">
                     <i class="fa fa-arrow-left"></i> <?= Yii::t('site', 'Назад') ?>
                 </div>

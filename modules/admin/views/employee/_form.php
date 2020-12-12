@@ -1,7 +1,10 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\Position;
+use app\models\Department;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Employee */
@@ -14,7 +17,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'full_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'position_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Position::find()->all(), 'id', 'name'), [
+    <?= $form->field($model, 'position_id')->dropDownList(ArrayHelper::map(Position::find()->asArray()->all(), 'id', 'name'), [
+        'prompt' => 'Выберите должность'
+    ]) ?>
+
+    <?= $form->field($model, 'department_id')->dropDownList(ArrayHelper::map(Department::find()->asArray()->all(), 'id', 'name'), [
         'prompt' => 'Выберите должность'
     ]) ?>
 
