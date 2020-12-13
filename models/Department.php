@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $name
+ * @property boolean $is_dury
  */
 class Department extends \yii\db\ActiveRecord
 {
@@ -27,6 +28,8 @@ class Department extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'string', 'max' => 255],
+            ['schedule', 'string'],
+            ['is_duty', 'integer']
         ];
     }
 
@@ -37,6 +40,8 @@ class Department extends \yii\db\ActiveRecord
     {
         return [
             'name' => 'Имя',
+            'is_duty' => 'Дежурный',
+            'schedule' => 'Расписание'
         ];
     }
 	
