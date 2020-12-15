@@ -147,4 +147,9 @@ class SiteController extends Controller
     {
         return $this->render('direction');
     }
+
+    public function actionMap()
+    {
+        return $this->render('map');
+    }
 }

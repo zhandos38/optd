@@ -12,13 +12,6 @@ $this->title = 'Главная старница';
             </div>
         </a>
     </div>
-	<div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/direction']) ?>" class="main-menu__item-link">
-            <div class="main-menu__item">
-                <?= Yii::t('site', 'Территория обслуживание поликлиники') ?>
-            </div>
-        </a>
-    </div>
     <div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['schedule/index']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
@@ -34,7 +27,7 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/history']) ?>" class="main-menu__item-link">
+        <a href="<?= \yii\helpers\Url::to(['site/map']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'Расположение кабинетов') ?>
             </div>
