@@ -57,7 +57,7 @@ class Employee extends \yii\db\ActiveRecord
             [['position_id', 'department_id', 'created_at', 'updated_at'], 'integer'],
             [['full_name', 'cabinet', 'image'], 'string', 'max' => 255],
             [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'], 'string'],
-            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg']
+            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg']
         ];
     }
 

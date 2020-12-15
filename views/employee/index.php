@@ -5,7 +5,7 @@ use yii\helpers\Url;
 /** @var $department \app\models\Department */
 /** @var \yii\web\View $view */
 
-$this->title = 'График врачей';
+$this->title = 'Список врачей';
 ?>
 
 <div class="buttons-group">
