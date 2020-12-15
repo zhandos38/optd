@@ -15,59 +15,74 @@
         <div class="direction__content">
             <div class="direction__item">
                 <div class="direction__image-wrapper">
-                    <img src="/img/doctor.jpg" alt="direction" class="direction__image">
+                    <img src="/img/doctor-photo.png" alt="direction" class="direction__image">
                 </div>
                 <div class="direction__description">
-                    Главный врач – Сагимбеков Болатхан Салибекович  05.03.1962 г.р. закончил Алматинский государственный медицинский институт 1985 г. лечебное дело, кандидат медицинсий наук, стаж 29 лет
+                    <b>Главный врач</b> – Омар Акмарал Уалихановна
+                    <p>
+                        <b>Образование:</b> <br>
+                        Южно-Казахстанская Государственная медицинская академия (1995-2001гг.), факультет — лечебное дело, специальность — врач терапевт, дерматовенеролог высшей категории, магистр общественного здравоохранения.
+                        Опыт работы <br>
+                        2002-2013 гг. – врач дерматовенеролог в Областном дерматовенерологическом диспансере <br>
+                        2013-2014 гг. — врач дерматовенеролог в Шымкентской центральной поликлиники <br>
+                        С июля 2014 г. — заместитель главного врача ШГП №11 <br>
+                        <b>Повышение квалификации</b> <br>
+                        2002 г. — АГИУВ «Дерматовенерология» <br>
+                        2006 г. – Ташкент НИИ «Аппаратная косметология» <br>
+                        2007 г.- Москва ЦНКВИ «Современные методы диагностики, лечения и профилактики урогенитальных заболеваний »
+                        <br>
+                        2010 г.- АГИУВ Вопросы дерматовенерологии. <br>
+                        2013 г.- ЮКГМА по ресурсам ThomsonReutersдля научных исследований. <br>
+                        2012-2013 г- на базе ЮКГФА, прошла магистратуру по специальности общественное здравоохранение , с присвоением академической степени магистр общественного здравоохранения.
+                        <br>
+
+                        <b>Akmaral.omar.78@mail.ru</b>
+                    </p>
                 </div>
             </div>
             <hr>
         </div>
-		<div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam1.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Кудайбергенов Ишанбай Рыскулбекович - Заместитель главного врача по лечебной 
-                </div>
-            </div>
-            <hr>
-        </div>
-		<div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam2.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Нуржанов Галымжан Калмуратович - Заместитель главного врача по организационо-методической
+        <div class="row">
+            <div class="col-md-4">
+                <div class="direction__content">
+                    <div class="direction__item">
+                        <div class="direction__image-wrapper">
+                            <img src="/img/zam1.jpeg" alt="direction" class="direction__image">
+                        </div>
+                        <div class="direction__description">
+                            Муздыбаева Эльмира Махановна - Заместитель главного врача
+                        </div>
+                    </div>
+                    <hr>
                 </div>
             </div>
-            <hr>
-        </div>
-		<div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam3.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Капанова Карлыгаш Аширметовна - Заместитель главного врача по контролю качества медицинских
-                </div>
-            </div>
-            <hr>
-        </div>
-		<div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam4.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Алиев Жанғали Арапханович - Заместитель главного врача по делам экономического и административно-хозяйственного
+            <div class="col-md-4">
+                <div class="direction__content">
+                    <div class="direction__item">
+                        <div class="direction__image-wrapper">
+                            <img src="/img/zam2.jpeg" alt="direction" class="direction__image">
+                        </div>
+                        <div class="direction__description">
+                            Турдалиева Айжан Ауесбековна - Заместитель главного врача
+                        </div>
+                    </div>
+                    <hr>
                 </div>
             </div>
-            <hr>
+            <div class="col-md-4">
+                <div class="direction__content">
+                    <div class="direction__item">
+                        <div class="direction__image-wrapper">
+                            <img src="/img/zam3.jpeg" alt="direction" class="direction__image">
+                        </div>
+                        <div class="direction__description">
+                            Тлешова Бахыткуль Темирбековна - Заместитель главного врача
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </div>
-	
     <?php else: ?>
         <div class="direction__name">
             Әкімшілік
@@ -75,13 +90,64 @@
         <div class="direction__content">
             <div class="direction__item">
                 <div class="direction__image-wrapper">
-                    <img src="/img/doctor.jpg" alt="direction" class="direction__image">
+                    <img src="/img/doctor-photo.png" alt="direction" class="direction__image">
                 </div>
                 <div class="direction__description">
-                    Бас дәрігер – Сағымбеков Болатхан Салыбекович  05.03.1962 ж.т.  1985 ж. Алматы мемлекеттік медицина институтының емдеу ісі мамандығын бітірген.Медицина ғылымдарының кандидаты, жұмыс өтілі 29 жыл
+                    Главный врач – Омар Акмарал Уалихановна
+                    <p>
+                        <b>Образование:</b> <br>
+                        Южно-Казахстанская Государственная медицинская академия (1995-2001гг.), факультет — лечебное дело, специальность — врач терапевт, дерматовенеролог высшей категории, магистр общественного здравоохранения.
+                        Опыт работы <br>
+                        2002-2013 гг. – врач дерматовенеролог в Областном дерматовенерологическом диспансере <br>
+                        2013-2014 гг. — врач дерматовенеролог в Шымкентской центральной поликлиники <br>
+                        С июля 2014 г. — заместитель главного врача ШГП №11 <br>
+                        <b>Повышение квалификации</b> <br>
+                        2002 г. — АГИУВ «Дерматовенерология» <br>
+                        2006 г. – Ташкент НИИ «Аппаратная косметология» <br>
+                        2007 г.- Москва ЦНКВИ «Современные методы диагностики, лечения и профилактики урогенитальных заболеваний »
+                        <br>
+                        2010 г.- АГИУВ Вопросы дерматовенерологии. <br>
+                        2013 г.- ЮКГМА по ресурсам ThomsonReutersдля научных исследований. <br>
+                        2012-2013 г- на базе ЮКГФА, прошла магистратуру по специальности общественное здравоохранение , с присвоением академической степени магистр общественного здравоохранения.
+                        <br>
+
+                        <b>Akmaral.omar.78@mail.ru</b>
+                    </p>
                 </div>
             </div>
             <hr>
+        </div>
+        <div class="direction__content">
+            <div class="direction__item">
+                <div class="direction__image-wrapper">
+                    <img src="/img/zam1.jpg" alt="direction" class="direction__image">
+                </div>
+                <div class="direction__description">
+                    Муздыбаева Эльмира Махановна - Заместитель главного врача
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="direction__content">
+            <div class="direction__item">
+                <div class="direction__image-wrapper">
+                    <img src="/img/zam2.jpg" alt="direction" class="direction__image">
+                </div>
+                <div class="direction__description">
+                    Турдалиева Айжан Ауесбековна - Заместитель главного врача
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="direction__content">
+            <div class="direction__item">
+                <div class="direction__image-wrapper">
+                    <img src="/img/zam3.jpg" alt="direction" class="direction__image">
+                </div>
+                <div class="direction__description">
+                    Тлешова Бахыткуль Темирбековна - Заместитель главного врача
+                </div>
+            </div>
         </div>
     <?php endif; ?>
 </div>

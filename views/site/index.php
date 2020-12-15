@@ -5,6 +5,13 @@
 $this->title = 'Главная старница';
 ?>
 <div class="main-menu">
+    <div class="main-menu__item-wrapper">
+        <a href="<?= \yii\helpers\Url::to(['site/direction']) ?>" class="main-menu__item-link">
+            <div class="main-menu__item">
+                <?= Yii::t('site', 'Администрация') ?>
+            </div>
+        </a>
+    </div>
 	<div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['site/direction']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
