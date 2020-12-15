@@ -18,7 +18,6 @@
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
-                    ['label' => 'Меню', 'options' => ['class' => 'header']],
                     ['label' => 'Работники', 'icon' => 'file-code-o', 'url' => ['/admin/employee/index']],
                     ['label' => 'Должности', 'icon' => 'file-code-o', 'url' => ['/admin/position/index']],
                     ['label' => 'Отделении', 'icon' => 'file-code-o', 'url' => ['/admin/department/index']],

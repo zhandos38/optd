@@ -13,7 +13,7 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['employee/index']) ?>" class="main-menu__item-link">
+        <a href="<?= \yii\helpers\Url::to(['schedule/index']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'График работы') ?>
             </div>
@@ -62,14 +62,14 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/insurance']) ?>" class="main-menu__item-link">
+        <a href="/file/list-of-nonfree.pdf" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'Платные услуги') ?>
             </div>
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/insurance']) ?>" class="main-menu__item-link">
+        <a href="<?= \yii\helpers\Url::to(['site/about']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'О поликлинике') ?>
             </div>
