@@ -152,4 +152,9 @@ class SiteController extends Controller
     {
         return $this->render('map');
     }
+
+    public function actionCodex()
+    {
+        return $this->render('codex');
+    }
 }

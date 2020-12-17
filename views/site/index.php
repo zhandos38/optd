@@ -48,7 +48,7 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/insurance']) ?>" class="main-menu__item-link">
+        <a href="<?= \yii\helpers\Url::to(['site/codex']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'Нормативно-правовые акты') ?>
             </div>
