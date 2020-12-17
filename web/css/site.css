@@ -396,3 +396,35 @@ a.desc:after {
         font-size: 19px;
     }
 }
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 24px 15px 20px !important;
+    }
+    .header {
+        height: 166px;
+        padding-top: 0;
+    }
+    .header__name {
+        font-size: 12px;
+    }
+    .header__lang {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .select-lang__link {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .header__symbol {
+        width: 76px;
+        margin-top: -6px;
+    }
+    .go-home-button, .back-button {
+        font-size: 14px;
+    }
+    .footer {
+        height: 0;
+        color: #fff;
+    }
+}

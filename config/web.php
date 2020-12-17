@@ -7,7 +7,7 @@ $config = [
     'id' => 'basic',
     'name' => 'Med kiosk',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'devicedetect'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -44,6 +44,9 @@ $config = [
             ],
         ],
         'db' => $db,
+        'devicedetect' => [
+            'class' => 'alexandernst\devicedetect\DeviceDetect'
+        ],
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
             'enablePrettyUrl' => true,

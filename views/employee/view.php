@@ -32,44 +32,60 @@ $this->title = 'График врача';
         </div>
     </div>
     <div class="employee-card__info-wrapper">
-        <div class="employee-card__image-wrapper">
-            <img src="/img/employee/<?= $model->image ?>" alt="<?= $model->image ?>" class="employee-card__image">
-        </div>
-        <div class="employee-card__info">
-            <div class="employee-card__full-name">
-                <?= $model->full_name ?>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/img/employee/<?= $model->image ?>" alt="<?= $model->image ?>" class="employee-card__image">
             </div>
-            <div class="employee-card__position">
-                <?= $model->position->name ?>
-            </div>
-            <div class="employee-card__cabinet">
-                <?= Yii::t('site', 'Кабинет') ?> <?= $model->cabinet ?>
-            </div>
-            <div class="employee-card__schedule">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th><?= Yii::t('site', 'Понидельник') ?></th>
-                            <th><?= Yii::t('site', 'Вторник') ?></th>
-                            <th><?= Yii::t('site', 'Среда') ?></th>
-                            <th><?= Yii::t('site', 'Четверг') ?></th>
-                            <th><?= Yii::t('site', 'Пятница') ?></th>
-                            <th><?= Yii::t('site', 'Суббота') ?></th>
-                            <th><?= Yii::t('site', 'Воскресенье') ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th><?= $model->monday ?></th>
-                            <th><?= $model->tuesday ?></th>
-                            <th><?= $model->wednesday ?></th>
-                            <th><?= $model->thursday ?></th>
-                            <th><?= $model->friday ?></th>
-                            <th><?= $model->saturday ? $model->saturday : 'Выходной' ?></th>
-                            <th><?= $model->sunday ? $model->sunday : 'Выходной' ?></th>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="col-md-8">
+                <div class="employee-card__info">
+                    <div class="employee-card__full-name">
+                        <?= $model->full_name ?>
+                    </div>
+                    <div class="employee-card__position">
+                        <?= $model->position->name ?>
+                    </div>
+                    <div class="employee-card__cabinet">
+                        <?= Yii::t('site', 'Кабинет') ?> <?= $model->cabinet ?>
+                    </div>
+                    <div class="employee-card__schedule">
+                        <?php if (!Yii::$app->devicedetect->isMobile()): ?>
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th><?= Yii::t('site', 'Понидельник') ?></th>
+                                    <th><?= Yii::t('site', 'Вторник') ?></th>
+                                    <th><?= Yii::t('site', 'Среда') ?></th>
+                                    <th><?= Yii::t('site', 'Четверг') ?></th>
+                                    <th><?= Yii::t('site', 'Пятница') ?></th>
+                                    <th><?= Yii::t('site', 'Суббота') ?></th>
+                                    <th><?= Yii::t('site', 'Воскресенье') ?></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th><?= $model->monday ? $model->friday : 'Не указано' ?></th>
+                                    <th><?= $model->tuesday ? $model->tuesday : 'Не указано' ?></th>
+                                    <th><?= $model->wednesday ? $model->wednesday : 'Не указано' ?></th>
+                                    <th><?= $model->thursday ? $model->thursday : 'Не указано' ?></th>
+                                    <th><?= $model->friday ? $model->friday : 'Не указано' ?></th>
+                                    <th><?= $model->saturday ? $model->saturday : 'Выходной' ?></th>
+                                    <th><?= $model->sunday ? $model->sunday : 'Выходной' ?></th>
+                                </tr>
+                                </tbody>
+                            </table>
+                        <?php else: ?>
+                            <ul>
+                                <li><?= Yii::t('site', 'Понидельник') ?>: <?= $model->monday ? $model->monday : 'Не указано' ?></li>
+                                <li><?= Yii::t('site', 'Вторник') ?>: <?= $model->tuesday ? $model->tuesday : 'Не указано' ?></li>
+                                <li><?= Yii::t('site', 'Среда') ?>: <?= $model->wednesday ? $model->wednesday : 'Не указано' ?></li>
+                                <li><?= Yii::t('site', 'Четверг') ?>: <?= $model->thursday ? $model->thursday : 'Не указано' ?></li>
+                                <li><?= Yii::t('site', 'Пятница') ?>: <?= $model->friday ? $model->friday : 'Не указано' ?></li>
+                                <li><?= Yii::t('site', 'Суббота') ?>: <?= $model->saturday ? $model->saturday : 'Выходной' ?></li>
+                                <li><?= Yii::t('site', 'Воскресенье') ?>: <?= $model->saturday ? $model->saturday : 'Выходной' ?></li>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -103,10 +119,10 @@ $this->title = 'График врача';
 		
 		<div class="row">
 			<div class="col-md-6">
-			<?= $form->field($ratingModel, 'iin')->textInput(['id' => 'rating-form-iin']) ?>
+			    <?= $form->field($ratingModel, 'iin')->textInput(['id' => 'rating-form-iin']) ?>
 			</div>
 			<div class="col-md-6">
-			<?= $form->field($ratingModel, 'customer_name')->textInput(['id' => 'rating-form-customer']) ?>
+			    <?= $form->field($ratingModel, 'customer_name')->textInput(['id' => 'rating-form-customer']) ?>
 			</div>
 	
 		</div>
@@ -177,7 +193,9 @@ function iin(iin)
     }
     return [(k == iin.substr(11, 1)), '<font color="red">Контрольный разряд ИИН неверный, должно быть ' + k + ', а стоит ' + iin.substr(11, 1) +'</font>'];    
 }
+JS;
 
+$jsKeyboard =<<<JS
 $(document).ready(function(){
   $('#rating-comment').mlKeyboard({
     layout: 'ru_RU'
@@ -197,5 +215,7 @@ $(document).ready(function(){
 JS;
 
 $this->registerJs($js);
-
+if (!Yii::$app->devicedetect->isMobile()) {
+    $this->registerJs($jsKeyboard);
+}
 ?>
