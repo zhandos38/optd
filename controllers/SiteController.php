@@ -157,4 +157,9 @@ class SiteController extends Controller
     {
         return $this->render('codex');
     }
+
+    public function actionSupport()
+    {
+        return $this->render('support');
+    }
 }
