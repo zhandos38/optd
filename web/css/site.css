@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    background: url("/img/zima-gory-sneg-derevya-eli.jpg") no-repeat;
+    background: url("/img/gradient.jpg") no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }

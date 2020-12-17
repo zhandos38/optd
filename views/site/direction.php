@@ -47,7 +47,7 @@
                 <div class="direction__content">
                     <div class="direction__item">
                         <div class="direction__image-wrapper">
-                            <img src="/img/zam1.jpeg" alt="direction" class="direction__image">
+                            <img src="/img/zam1.png" alt="direction" class="direction__image">
                         </div>
                         <div class="direction__description">
                             Муздыбаева Эльмира Махановна - Заместитель главного врача
@@ -117,35 +117,44 @@
             </div>
             <hr>
         </div>
-        <div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam1.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Муздыбаева Эльмира Махановна - Заместитель главного врача
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam2.jpg" alt="direction" class="direction__image">
-                </div>
-                <div class="direction__description">
-                    Турдалиева Айжан Ауесбековна - Заместитель главного врача
+        <div class="row">
+            <div class="col-md-4">
+                <div class="direction__content">
+                    <div class="direction__item">
+                        <div class="direction__image-wrapper">
+                            <img src="/img/zam1.png" alt="direction" class="direction__image">
+                        </div>
+                        <div class="direction__description">
+                            Муздыбаева Эльмира Махановна - Заместитель главного врача
+                        </div>
+                    </div>
+                    <hr>
                 </div>
             </div>
-            <hr>
-        </div>
-        <div class="direction__content">
-            <div class="direction__item">
-                <div class="direction__image-wrapper">
-                    <img src="/img/zam3.jpg" alt="direction" class="direction__image">
+            <div class="col-md-4">
+                <div class="direction__content">
+                    <div class="direction__item">
+                        <div class="direction__image-wrapper">
+                            <img src="/img/zam2.jpeg" alt="direction" class="direction__image">
+                        </div>
+                        <div class="direction__description">
+                            Турдалиева Айжан Ауесбековна - Заместитель главного врача
+                        </div>
+                    </div>
+                    <hr>
                 </div>
-                <div class="direction__description">
-                    Тлешова Бахыткуль Темирбековна - Заместитель главного врача
+            </div>
+            <div class="col-md-4">
+                <div class="direction__content">
+                    <div class="direction__item">
+                        <div class="direction__image-wrapper">
+                            <img src="/img/zam3.jpeg" alt="direction" class="direction__image">
+                        </div>
+                        <div class="direction__description">
+                            Тлешова Бахыткуль Темирбековна - Заместитель главного врача
+                        </div>
+                    </div>
+                    <hr>
                 </div>
             </div>
         </div>
