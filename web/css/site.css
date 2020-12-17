@@ -117,9 +117,6 @@ a.desc:after {
 .header__symbol {
     width: 80px;
 }
-.header__content {
-    padding-top: 12px;
-}
 .header__lang {
 	margin-top: 5px;
 }
@@ -392,4 +389,10 @@ a.desc:after {
 }
 .direction__image {
     width: 250px;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__name {
+        font-size: 19px;
+    }
 }
