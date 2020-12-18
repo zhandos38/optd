@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </h1>
 
     <p class="text-center" style="font-size: 24px; font-weight: bold">
-        +(7252) 77-32-39 ( сенім телефоны)
+        +(7252) 77-32-39 (сенім телефоны)
         +(7252) 77-32-37 (анықтама телефоны)
     </p>
 </div>
