@@ -16,6 +16,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'is_duty')->checkbox() ?>
 
+    <?= $form->field($model, 'is_staff')->checkbox() ?>
+
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

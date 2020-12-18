@@ -29,7 +29,7 @@ class Department extends \yii\db\ActiveRecord
         return [
             [['name'], 'string', 'max' => 255],
             ['schedule', 'string'],
-            ['is_duty', 'integer']
+            [['is_duty', 'is_staff'], 'integer']
         ];
     }
 
@@ -40,8 +40,9 @@ class Department extends \yii\db\ActiveRecord
     {
         return [
             'name' => 'Имя',
-            'is_duty' => 'Дежурный',
-            'schedule' => 'Расписание'
+            'is_duty' => 'Показовать расписание',
+            'is_staff' => 'Показовать в списке врачей',
+            'schedule' => 'Расписание',
         ];
     }
 	
