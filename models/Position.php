@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $name
+ * @property string $name_kz
  */
 class Position extends \yii\db\ActiveRecord
 {
@@ -26,7 +27,7 @@ class Position extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'string', 'max' => 255],
+            [['name', 'name_kz'], 'string', 'max' => 255],
         ];
     }
 
@@ -37,7 +38,8 @@ class Position extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('site', 'ID'),
-            'name' => Yii::t('site', 'Название'),
+            'name' => Yii::t('site', 'Наименование'),
+            'name_kz' => Yii::t('site', 'Наименование (KZ)'),
         ];
     }
 }

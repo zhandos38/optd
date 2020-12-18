@@ -17,5 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 <div class="site-map">
-    <img src="/img/map.jpg" style="width: 100%" alt="map">
+    <img src="/img/map1.jpg" style="width: 100%" alt="map">
+    <img src="/img/map2.jpg" style="width: 100%" alt="map">
+    <img src="/img/map3.jpg" style="width: 100%" alt="map">
+    <img src="/img/map4.jpg" style="width: 100%" alt="map">
 </div>

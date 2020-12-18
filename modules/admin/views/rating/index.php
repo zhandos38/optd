@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'employee_id',
                 'value' => function(Rating $model) {
-                    return $model->employee->full_name;
+                    return $model->employee ? $model->employee->full_name : 'Не указано';
                 },
                 'filter' => \yii\helpers\ArrayHelper::map(\app\models\Employee::find()->all(), 'id', 'full_name')
             ],

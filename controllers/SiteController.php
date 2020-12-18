@@ -153,13 +153,13 @@ class SiteController extends Controller
         return $this->render('map');
     }
 
-    public function actionCodex()
-    {
-        return $this->render('codex');
-    }
-
     public function actionSupport()
     {
         return $this->render('support');
+    }
+
+    public function actionNonFree()
+    {
+        return $this->render('non-free');
     }
 }
