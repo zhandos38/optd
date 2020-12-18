@@ -42,4 +42,9 @@ class Position extends \yii\db\ActiveRecord
             'name_kz' => Yii::t('site', 'Наименование (KZ)'),
         ];
     }
+
+    public function getName()
+    {
+        return Yii::$app->language === 'ru' ? $this->name : $this->name_kz;
+    }
 }

@@ -19,7 +19,7 @@ class EmployeeController extends Controller
 {
     public function actionIndex()
     {
-        $departments = Department::find()->all();
+        $departments = Department::find()->andWhere(['is_duty' => null])->all();
         return $this->render('index', ['departments' => $departments]);
     }
 
