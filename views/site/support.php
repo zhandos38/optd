@@ -20,9 +20,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>
         <?= Yii::t('site', 'Служба поддержки пациентов') ?>
     </h1>
-
-    <p class="text-center" style="font-size: 24px; font-weight: bold">
-        +(7252) 77-32-39 ( сенім телефоны)
+    <p class="text-center" style="font-size: 24px;">
+        +(7252) 77-32-39 ( сенім телефоны) <br>
         +(7252) 77-32-37 (анықтама телефоны)
+    </p>
+    <h1>
+        <?= Yii::t('site', 'Если у вас возникнут жалобы обращайтесь по указанному номеру') ?>
+    </h1>
+    <p class="text-center" style="font-size: 24px;">
+        <i class="fab fa-whatsapp-square text-success"></i> <i class="fa fa-phone-square text-info"></i>  +8(775) 719-13-79 <br>
+        <i class="fab fa-whatsapp-square text-success"></i> <i class="fa fa-phone-square text-info"></i>  +8(701) 404-04-77 <br>
     </p>
 </div>
