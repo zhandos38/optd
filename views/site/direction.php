@@ -15,7 +15,7 @@
         <div class="direction__content">
             <div class="direction__item">
                 <div class="direction__image-wrapper">
-                    <img src="/img/doctor-photo.png" alt="direction" class="direction__image">
+                    <img src="/img/doctor-photo.jpeg" alt="direction" class="direction__image">
                 </div>
                 <div class="direction__description">
                     <b>Главный врач</b> – Омар Акмарал Уалихановна
@@ -90,7 +90,7 @@
         <div class="direction__content">
             <div class="direction__item">
                 <div class="direction__image-wrapper">
-                    <img src="/img/doctor-photo.png" alt="direction" class="direction__image">
+                    <img src="/img/doctor-photo.jpeg" alt="direction" class="direction__image">
                 </div>
                 <div class="direction__description">
                     <b>Бас дәрігер </b> - Омар Ақмарал Уалиханқызы

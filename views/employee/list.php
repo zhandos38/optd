@@ -21,7 +21,7 @@ $this->title = 'График врачей';
     <?php foreach ($models as $model): ?>
         <div class="employee-list__item-wrapper">
             <a href="<?= Url::to(['employee/view', 'id' => $model->id]) ?>" class="employee-list__item-link">
-                <div class="employee-list__item"><?= $model->full_name ?> - <b><?= $model->position->name ?></b></div>
+                <div class="employee-list__item"><?= $model->full_name ?> - <b><?= $model->position ? $model->position->getName() : '' ?></b></div>
             </a>
         </div>
     <?php endforeach; ?>
