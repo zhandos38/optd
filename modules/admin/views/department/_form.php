@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -19,6 +20,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'is_staff')->checkbox() ?>
 
     <?= $form->field($model, 'order')->input('number') ?>
+
+    <?= $form->field($model, 'parent_id')->dropDownList(ArrayHelper::map(\app\models\Department::find()->asArray()->all(), 'id', 'name'), ['prompt' => 'Укажите отделение']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

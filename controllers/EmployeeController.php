@@ -17,9 +17,9 @@ use yii\web\Controller;
 
 class EmployeeController extends Controller
 {
-    public function actionIndex()
+    public function actionIndex($id = null)
     {
-        $departments = Department::find()->andWhere(['is_staff' => true])->orderBy(['order' => SORT_ASC])->all();
+        $departments = Department::find()->andWhere(['parent_id' => $id])->andWhere(['is_staff' => true])->orderBy(['order' => SORT_ASC])->all();
         return $this->render('index', ['departments' => $departments]);
     }
 

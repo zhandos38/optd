@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "department".
@@ -11,6 +12,9 @@ use Yii;
  * @property string $name
  * @property boolean $is_duty
  * @property int $order
+ * @property int $parent_id
+ *
+ * @property Department $children
  */
 class Department extends \yii\db\ActiveRecord
 {
@@ -30,7 +34,7 @@ class Department extends \yii\db\ActiveRecord
         return [
             [['name'], 'string', 'max' => 255],
             ['schedule', 'string'],
-            [['is_duty', 'is_staff', 'order'], 'integer']
+            [['is_duty', 'is_staff', 'order', 'parent_id'], 'integer']
         ];
     }
 
@@ -44,7 +48,8 @@ class Department extends \yii\db\ActiveRecord
             'is_duty' => 'Показовать расписание',
             'is_staff' => 'Показовать в списке врачей',
             'schedule' => 'Расписание',
-            'order' => 'Очередь'
+            'order' => 'Очередь',
+            'parent_id' => 'Родитель'
         ];
     }
 	
@@ -52,4 +57,9 @@ class Department extends \yii\db\ActiveRecord
 	{
 		return $this->hasMany(Admission::className(), ['department_id' => 'id']);
 	}
+
+	public function getChildren()
+    {
+        return $this->hasMany(Department::className(), ['parent_id' => 'id']);
+    }
 }
