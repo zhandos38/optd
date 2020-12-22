@@ -9,7 +9,8 @@ use Yii;
  *
  * @property int $id
  * @property string $name
- * @property boolean $is_dury
+ * @property boolean $is_duty
+ * @property int $order
  */
 class Department extends \yii\db\ActiveRecord
 {
@@ -29,7 +30,7 @@ class Department extends \yii\db\ActiveRecord
         return [
             [['name'], 'string', 'max' => 255],
             ['schedule', 'string'],
-            [['is_duty', 'is_staff'], 'integer']
+            [['is_duty', 'is_staff', 'order'], 'integer']
         ];
     }
 
@@ -43,6 +44,7 @@ class Department extends \yii\db\ActiveRecord
             'is_duty' => 'Показовать расписание',
             'is_staff' => 'Показовать в списке врачей',
             'schedule' => 'Расписание',
+            'order' => 'Очередь'
         ];
     }
 	

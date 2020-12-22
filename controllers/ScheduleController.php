@@ -11,7 +11,7 @@ class ScheduleController extends Controller
 {
     public function actionIndex()
     {
-        $departments = Department::findAll(['is_duty' => true]);
+        $departments = Department::find()->andWhere(['is_duty' => true])->orderBy(['order' => SORT_ASC])->all();
         return $this->render('index', [
             'departments' => $departments
         ]);

@@ -19,13 +19,13 @@ class EmployeeController extends Controller
 {
     public function actionIndex()
     {
-        $departments = Department::find()->andWhere(['is_staff' => true])->all();
+        $departments = Department::find()->andWhere(['is_staff' => true])->orderBy(['order' => SORT_ASC])->all();
         return $this->render('index', ['departments' => $departments]);
     }
 
     public function actionList($id)
     {
-        $models = Employee::findAll(['department_id' => $id]);
+        $models = Employee::find()->andWhere(['department_id' => $id])->all();
         return $this->render('list', ['models' => $models]);
     }
 
