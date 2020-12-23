@@ -38,7 +38,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">Powered by Itb-group.kz - +7(702)184-42-95</p>
+        <p class="pull-left">Powered by <i class="fa fa-heart"></i> <a href="http://itbgroup.kz">Веб-студия IT Business Group</a></p>
     </div>
 </footer>
 

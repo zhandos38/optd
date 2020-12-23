@@ -19,7 +19,7 @@ $this->title = 'График работы';
 <div class="employee-list">
     <?php foreach ($departments as $department): ?>
         <div class="employee-list__item-wrapper">
-            <a href="<?= Url::to(['schedule/view', 'id' => $department->id]) ?>" class="employee-list__item-link">
+            <a href="<?= $department->children ? Url::to(['schedule/index', 'id' => $department->id]) : Url::to(['schedule/view', 'id' => $department->id]) ?>" class="employee-list__item-link">
                 <div class="employee-list__item"><?= $department->name ?></div>
             </a>
         </div>
