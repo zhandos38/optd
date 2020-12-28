@@ -35,6 +35,7 @@ class EmployeeController extends Controller
         $rating = new Rating();
 
         if ($rating->load(\Yii::$app->request->post())) {
+            $rating->status = Rating::STATUS_NEW;
             $rating->employee_id = $id;
             $rating->save();
 

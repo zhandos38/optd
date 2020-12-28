@@ -23,6 +23,7 @@
                     ['label' => 'Отделении', 'icon' => 'file-code-o', 'url' => ['/admin/department/index']],
                     ['label' => 'Пациенты', 'icon' => 'file-code-o', 'url' => ['/admin/admission/index']],
                     ['label' => 'Рейтинги', 'icon' => 'file-code-o', 'url' => ['/admin/rating/index']],
+                    ['label' => 'Больницы', 'icon' => 'file-code-o', 'url' => ['/admin/facility/index']],
                 ],
             ]
         ) ?>

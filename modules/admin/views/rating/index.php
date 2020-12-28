@@ -14,10 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rating-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -41,6 +38,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'comment:ntext',
             'customer_name',
 			'iin',
+			[
+			    'attribute' => 'status',
+                'value' => function(Rating $model) {
+                    return $model->getStatus();
+                },
+                'filter' => Rating::getStatuses()
+            ],
             [
                 'attribute' => 'created_at',
                 'value' => function(Rating $model) {

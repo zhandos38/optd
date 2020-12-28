@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\AdmissionSearch;
 use app\models\Department;
+use app\models\Facility;
 use Yii;
 use yii\filters\AccessControl;
 use yii\helpers\VarDumper;
@@ -161,5 +162,40 @@ class SiteController extends Controller
     public function actionNonFree()
     {
         return $this->render('non-free');
+    }
+
+    public function actionLocation()
+    {
+        $marks = [];
+        $marksModel = Facility::find()->all();
+
+        foreach ($marksModel as $mark) {
+            $marks[] = [
+                'type' => "Feature",
+                "id" => $mark->id,
+                "geometry" => [
+                    "type" => "Point",
+                    "coordinates" => [
+                        $mark->lat, $mark->lng
+                    ]
+                ],
+                "properties" => [
+                    "name" => $mark->name,
+                    "address" => $mark->address,
+                    "phone" => $mark->phone,
+                    "workingHours" => $mark->working_hours,
+                    "hintContent" => $mark->name,
+                    "clusterCaption" => $mark->name,
+                    "iconCaption" => $mark->name
+                ],
+                "options" => [
+                    "preset" => 'islands#blueMedicalIcon',
+                ]
+            ];
+        }
+
+        return $this->render('location', [
+            'marks' => $marks
+        ]);
     }
 }

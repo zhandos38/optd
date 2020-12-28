@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "rating".
@@ -12,6 +13,7 @@ use Yii;
  * @property float|null $value
  * @property string|null $comment
  * @property string|null $iin
+ * @property int $status
  * @property int|null $created_at
  * @property int|null $updated_at
  *
@@ -19,6 +21,10 @@ use Yii;
  */
 class Rating extends \yii\db\ActiveRecord
 {
+    const STATUS_NEW = 0;
+    const STATUS_IN_PROCESS = 1;
+    const STATUS_FINISHED = 2;
+
     /**
      * {@inheritdoc}
      */
@@ -42,7 +48,7 @@ class Rating extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['employee_id', 'created_at', 'updated_at'], 'integer'],
+            [['employee_id', 'status', 'created_at', 'updated_at'], 'integer'],
             [['value'], 'number'],
             [['comment', 'customer_name'], 'string'],
             [['iin'], 'string', 'max' => 255],
@@ -65,6 +71,7 @@ class Rating extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'customer_name' => Yii::t('site', 'Ф.И.О пациента'),
+            'status' => 'Статус'
         ];
     }
 
@@ -74,5 +81,19 @@ class Rating extends \yii\db\ActiveRecord
     public function getEmployee()
     {
         return $this->hasOne(Employee::className(), ['id' => 'employee_id']);
+    }
+
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_NEW => 'Не решен',
+            self::STATUS_IN_PROCESS => 'В процессе',
+            self::STATUS_FINISHED => 'Решен',
+        ];
+    }
+
+    public function getStatus()
+    {
+        return ArrayHelper::getValue(self::getStatuses(), $this->status);
     }
 }
