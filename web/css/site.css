@@ -393,6 +393,42 @@ a.desc:after {
     text-transform: capitalize;
 }
 
+.chat-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 999999999999999;
+    bottom: 80px;
+    right: 20px;
+    padding: 5px;
+    margin: 0;
+}
+.whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    z-index: 999999999;
+    transition: .3s;
+    margin: 10px;
+    padding: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 7px 25px -2px rgba(68, 68, 68, 0.28);
+}
+.icon-whatsapp {
+    width: 82px;
+    height: 82px;
+}
+
 @media screen and (max-width: 1200px) {
     .header__name {
         font-size: 18px;
