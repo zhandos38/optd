@@ -198,4 +198,9 @@ class SiteController extends Controller
             'marks' => $marks
         ]);
     }
+
+    public function actionDauMed()
+    {
+        return $this->render('dau-med');
+    }
 }

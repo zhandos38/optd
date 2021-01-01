@@ -22,7 +22,8 @@
         "codemix/yii2-localeurls": "^1.7",
         "kartik-v/yii2-date-range": "dev-master",
         "kartik-v/yii2-widget-rating": "dev-master",
-        "alexandernst/yii2-device-detect": "0.0.12"
+        "alexandernst/yii2-device-detect": "0.0.12",
+        "2amigos/yii2-chartjs-widget" : "~2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

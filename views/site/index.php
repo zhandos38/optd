@@ -89,4 +89,11 @@ $this->title = 'Главная старница';
             </div>
         </a>
     </div>
+    <div class="main-menu__item-wrapper">
+        <a href="<?= \yii\helpers\Url::to(['site/dau-med']) ?>" class="main-menu__item-link">
+            <div class="main-menu__item">
+                <?= Yii::t('site', 'КМИС') ?>
+            </div>
+        </a>
+    </div>
 </div>
