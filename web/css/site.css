@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    background: url("/img/gradient.jpg") no-repeat;
+    background: url("/img/fon.jpg") no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -361,6 +361,9 @@ a.desc:after {
     text-align: justify;
 }
 
+.direction-img {
+    width: 100%;
+}
 .direction__name {
     font-size: 24px;
     font-weight: 600;
