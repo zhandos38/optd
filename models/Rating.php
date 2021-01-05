@@ -68,8 +68,8 @@ class Rating extends \yii\db\ActiveRecord
             'value' => Yii::t('site', 'Оценка'),
             'comment' => Yii::t('site', 'Комментарий'),
             'iin' => Yii::t('site', 'ИИН пациента'),
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_at' => 'Время создание',
+            'updated_at' => 'Время обновление',
             'customer_name' => Yii::t('site', 'Ф.И.О пациента'),
             'status' => 'Статус'
         ];
