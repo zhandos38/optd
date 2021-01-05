@@ -1,20 +1,20 @@
 <header class="header">
-    <div class="container" style="display: flex; justify-content: space-between">
+    <div class="container">
         <div class="row">
-            <div class="symbol-wrapper col-xs-3 col-md-2">
-                <img class="header__symbol" src="/img/symbol.png" alt="symbol">
-            </div>
-            <div class="col-xs-9 col-md-7">
+            <div class="col-xs-9 col-md-8 col-lg-8">
                 <div class="header__content">
-                    <div class="header__name">
-                        <?= Yii::t('site', '"Управление здравохранения города Шымкент"') ?>
-                    </div>
-                    <div class="header__name">
-                        <?= Yii::t('site', 'Добро пожаловать в ГКП на ПХВ "Городская поликлиника №3"') ?>
+                    <img class="header__symbol" src="/img/logo.png" alt="symbol">
+                    <div style="padding-left: 40px">
+                        <div class="header__name">
+                            <?= Yii::t('site', '"Управление здравохранения города Шымкент"') ?>
+                        </div>
+                        <div class="header__name">
+                            <b><?= Yii::t('site', 'ГКП НА ПХВ "ГОРОДСКОЙ ОНКОЛОГИЧЕСКИЙ ЦЕНТР"') ?></b>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4 col-lg-4">
                 <div class="header__lang pull-right">
                     <?= $this->render('select-language') ?>
                 </div>

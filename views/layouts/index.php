@@ -25,7 +25,9 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+
 <?= $this->render('_header') ?>
+
 <div class="wrap">
     <div class="container">
         <?= Breadcrumbs::widget([
@@ -36,11 +38,7 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">Powered by Itb-group.kz - +7(702)184-42-95</p>
-    </div>
-</footer>
+<?= $this->render('_footer') ?>
 
 <?php $this->endBody() ?>
 </body>

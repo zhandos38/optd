@@ -115,16 +115,20 @@ a.desc:after {
     padding-top: 20px;
 }
 .header__symbol {
-    width: 80px;
+    width: 100px;
 }
 .header__lang {
 	margin-top: 5px;
 }
 .header__name {
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: uppercase;
 }
+.header__content {
+    display: flex;
+}
+
 .select-lang__link {
     text-decoration: unset;
     padding: 10px;
