@@ -23,7 +23,10 @@
         "kartik-v/yii2-date-range": "dev-master",
         "kartik-v/yii2-widget-rating": "dev-master",
         "alexandernst/yii2-device-detect": "0.0.12",
-        "2amigos/yii2-chartjs-widget" : "~2.0"
+        "2amigos/yii2-chartjs-widget" : "~2.0",
+        "yiisoft/yii2-imagine": "^2.2",
+        "vova07/yii2-imperavi-widget": "*",
+        "kartik-v/yii2-widget-fileinput": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

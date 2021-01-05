@@ -96,4 +96,11 @@ $this->title = 'Главная старница';
             </div>
         </a>
     </div>
+    <div class="main-menu__item-wrapper">
+        <a href="<?= \yii\helpers\Url::to(['news/index']) ?>" class="main-menu__item-link">
+            <div class="main-menu__item">
+                <?= Yii::t('site', 'Новости') ?>
+            </div>
+        </a>
+    </div>
 </div>

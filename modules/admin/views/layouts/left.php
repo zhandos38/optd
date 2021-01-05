@@ -24,6 +24,7 @@
                     ['label' => 'Пациенты', 'icon' => 'file-code-o', 'url' => ['/admin/admission/index']],
                     ['label' => 'Рейтинги', 'icon' => 'file-code-o', 'url' => ['/admin/rating/index']],
                     ['label' => 'Больницы', 'icon' => 'file-code-o', 'url' => ['/admin/facility/index']],
+                    ['label' => 'Новости', 'icon' => 'file-code-o', 'url' => ['/admin/news/index']],
                 ],
             ]
         ) ?>
