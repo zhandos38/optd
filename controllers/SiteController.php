@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\AdmissionSearch;
 use app\models\Department;
 use app\models\Facility;
+use app\models\Request;
 use Yii;
 use yii\filters\AccessControl;
 use yii\helpers\VarDumper;
@@ -202,5 +203,23 @@ class SiteController extends Controller
     public function actionDauMed()
     {
         return $this->render('dau-med');
+    }
+
+    public function actionRequest()
+    {
+        $model = new Request();
+
+        if ($model->load(Yii::$app->request->post())) {
+            Yii::$app->mailer->compose()
+                ->setFrom('zhandos_38@mail.ru')
+                ->setTo('zhandos_38@mail.ru')
+                ->setSubject('Заявка к записи к директору')
+                ->setHtmlBody('<b>Ф.И.О:</b>' . $model->full_name . '<br><b>Сообщение:</b>' . $model->message)
+                ->send();
+        }
+
+        return $this->render('request', [
+            'model' => $model
+        ]);
     }
 }

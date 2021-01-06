@@ -103,4 +103,11 @@ $this->title = 'Главная старница';
             </div>
         </a>
     </div>
+    <div class="main-menu__item-wrapper">
+        <a href="<?= \yii\helpers\Url::to(['site/request']) ?>" class="main-menu__item-link">
+            <div class="main-menu__item">
+                <?= Yii::t('site', 'Запись к директору') ?>
+            </div>
+        </a>
+    </div>
 </div>
