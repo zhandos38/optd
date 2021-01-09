@@ -1,6 +1,7 @@
 <?php
 
 use app\models\Position;
+use yii\bootstrap\Modal;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -54,10 +55,42 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             //'updated_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{qrcode} {view} {update} {delete}',
+                'buttons' => [
+                    'qrcode' => function ($url, $model, $key) {
+                        return Html::button('<span class="fa fa-image"></span>', [
+                            'class' => 'employee-qrcode-btn',
+                            'data-id' => $model->id
+                        ]);
+                    }
+                ]
+            ],
         ],
     ]); ?>
 
     <?php Pjax::end(); ?>
 
 </div>
+<?php
+Modal::begin([
+    'header' => '<h4>QrCode</h4>',
+    'id' => 'modal-qrcode',
+    'size' => 'modal-sm'
+]);
+
+echo '<div id="modal-qrcode__content"></div>';
+
+Modal::end();
+
+$js =<<<JS
+$('.employee-qrcode-btn').on('click', function() {
+    $('#modal-qrcode').modal('show')
+    .find('#modal-qrcode__content')
+    .load('/ru/admin/employee/get-qrcode', {id: $( this ).data('id')});
+});
+JS;
+
+$this->registerJs($js);
+?>

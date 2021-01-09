@@ -120,6 +120,14 @@ class EmployeeController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionGetQrcode()
+    {
+        $model = Employee::findOne(['id' => Yii::$app->request->post()]);
+        return $this->renderAjax('_qrcode', [
+            'model' => $model
+        ]);
+    }
+
     /**
      * Finds the Employee model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
