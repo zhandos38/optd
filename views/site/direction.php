@@ -18,7 +18,7 @@
                             Мауленов Жаксылык Оразбайулы
                         </h5>
                         <p class="card-text">
-                            Директор городского онкологического центра
+                            <?= Yii::t('site', 'Директор городского онкологического центра') ?>
                         </p>
                     </div>
                 </div>
@@ -33,33 +33,33 @@
                             Жұмағали Дәулетбек Жұманұлы
                         </h5>
                         <p class="card-text">
-                            Заместитель директора по организационно-методической  работе
+                            <?= Yii::t('site', 'Заместитель директора по организационно-методической работе') ?>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card" style="text-align: center">
-                    <img class="card-img-top" style="width: 80%" src="/img/zam1.png" alt="Card image cap">
+                    <img class="card-img-top" style="width: 80%" src="/img/zam2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Рахманов Динмухамед Абдикаимович
                         </h5>
                         <p class="card-text">
-                            Заместитель директора по качеству
+                            <?= Yii::t('site', 'Заместитель директора по качеству') ?>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card" style="text-align: center">
-                    <img class="card-img-top" style="width: 80%" src="/img/zam1.png" alt="Card image cap">
+                    <img class="card-img-top" style="width: 80%" src="/img/zam3.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Исмаилов Самат Тастемирович
                         </h5>
                         <p class="card-text">
-                            Заместитель директора по лечебной части
+                            <?= Yii::t('site', 'Заместитель директора по лечебной части') ?>
                         </p>
                     </div>
                 </div>
