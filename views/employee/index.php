@@ -21,7 +21,7 @@ $this->title = 'Список врачей';
     <?php foreach ($departments as $department): ?>
         <div class="employee-list__item-wrapper">
             <a href="<?= $department->children ? Url::to(['employee/index', 'id' => $department->id]) : Url::to(['employee/list', 'id' => $department->id]) ?>" class="employee-list__item-link">
-                <div class="employee-list__item"><?= $department->name ?></div>
+                <div class="employee-list__item"><?= $department->getName() ?></div>
             </a>
         </div>
     <?php endforeach; ?>

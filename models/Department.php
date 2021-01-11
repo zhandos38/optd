@@ -64,4 +64,9 @@ class Department extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Department::className(), ['parent_id' => 'id']);
     }
+
+    public function getName()
+    {
+        return Yii::$app->language === 'ru' ? $this->name : $this->name_kz;
+    }
 }
