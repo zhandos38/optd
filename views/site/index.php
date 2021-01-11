@@ -13,13 +13,6 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['schedule/index']) ?>" class="main-menu__item-link">
-            <div class="main-menu__item">
-                <?= Yii::t('site', 'График работы') ?>
-            </div>
-        </a>
-    </div>
-    <div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['employee/index']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'Врачи поликлинки') ?>
