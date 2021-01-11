@@ -61,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'buttons' => [
                     'qrcode' => function ($url, $model, $key) {
                         return Html::button('<span class="fa fa-image"></span>', [
-                            'class' => 'employee-qrcode-btn',
+                            'class' => 'employee-qrcode-btn btn btn-info',
                             'data-id' => $model->id
                         ]);
                     }

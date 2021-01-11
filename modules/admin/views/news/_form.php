@@ -35,7 +35,7 @@ use yii\widgets\ActiveForm;
                 ['blue', '<span class="label-blue">blue</span>'],
             ],
         ],
-    ]); ?>
+    ]) ?>
 
     <?= $form->field($model, 'imageFile')->widget(FileInput::classname(), [
         'options' => ['accept' => 'image/*'],

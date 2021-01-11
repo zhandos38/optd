@@ -23,6 +23,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $friday [varchar(100)]
  * @property string $saturday [varchar(100)]
  * @property string $sunday [varchar(100)]
+ * @property string $description
  *
  * @property Position $position
  * @property Department $department
@@ -55,7 +56,7 @@ class Employee extends \yii\db\ActiveRecord
     {
         return [
             [['position_id', 'department_id', 'created_at', 'updated_at'], 'integer'],
-            [['full_name', 'cabinet', 'image'], 'string', 'max' => 255],
+            [['full_name', 'cabinet', 'image', 'description'], 'string', 'max' => 255],
             [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'], 'string'],
             [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg']
         ];
@@ -81,7 +82,8 @@ class Employee extends \yii\db\ActiveRecord
             'friday' => 'Пятница',
             'saturday' => 'Субботка',
             'sunday' => 'Воскресенье',
-            'imageFile' => 'Рисунок'
+            'imageFile' => 'Рисунок',
+            'description' => 'Описание'
         ];
     }
 
