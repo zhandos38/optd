@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'position_id',
                 'value' => function(Employee $model) {
-                    return $model->position->name;
+                    return !empty($model->position) ? $model->position->name  : 'Не указано';
                 },
                 'filter' => ArrayHelper::map(Position::find()->asArray()->all(), 'id', 'name')
             ],
