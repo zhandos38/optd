@@ -23,7 +23,7 @@
     </div>
 </header>
 <div class="chat-box">
-    <button onclick="window.location.href='https://wa.me/77075539798'" type="button" id="whats-openPopup" class="whatsapp-button">
+    <button onclick="window.location.href='https://wa.me/77015005959'" type="button" id="whats-openPopup" class="whatsapp-button">
         <img class="icon-whatsapp" src="https://image.flaticon.com/icons/svg/134/134937.svg">
     </button>
 </div>
