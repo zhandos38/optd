@@ -96,24 +96,36 @@ $this->title = 'График врача';
         <?php $form = \yii\widgets\ActiveForm::begin(['id' => 'rating-form']) ?>
 
             <?= $form->field($ratingModel, 'value')->widget(\kartik\rating\StarRating::className(), [
-            'pluginOptions' => [
-                'stars' => 5,
-                'min' => 0,
-                'max' => 5,
-                'step' => 1,
-                'filledStar' => '<i class="glyphicon glyphicon-heart"></i>',
-                'emptyStar' => '<i class="glyphicon glyphicon-heart-empty"></i>',
-                'defaultCaption' => '{rating}',
-                'starCaptions' => [
-					0 => Yii::t('site', 'Просто ужасно'),
-					1 => Yii::t('site', 'Очень плохо'),
-					2 => Yii::t('site', 'Плохо'),
-					3 => Yii::t('site', 'Удовлетворительно'),
-					4 => Yii::t('site', 'Хорошо'),
-					5 => Yii::t('site', 'Отлично')
-				],
-            ]
+                'pluginOptions' => [
+                    'stars' => 5,
+                    'min' => 0,
+                    'max' => 5,
+                    'step' => 1,
+                    'filledStar' => '<i class="glyphicon glyphicon-heart"></i>',
+                    'emptyStar' => '<i class="glyphicon glyphicon-heart-empty"></i>',
+                    'defaultCaption' => '{rating}',
+                    'starCaptions' => [
+                        0 => Yii::t('site', 'Просто ужасно'),
+                        1 => Yii::t('site', 'Очень плохо'),
+                        2 => Yii::t('site', 'Плохо'),
+                        3 => Yii::t('site', 'Удовлетворительно'),
+                        4 => Yii::t('site', 'Хорошо'),
+                        5 => Yii::t('site', 'Отлично')
+                    ],
+                ]
         ]) ?>
+
+        <div id="extra-questions-block" class="row" style="display: none">
+            <div class="col-md-6">
+                <?= $form->field($ratingModel, 'is_inform_good')->checkbox() ?>
+            </div>
+            <div class="col-md-6">
+                <?= $form->field($ratingModel, 'is_polite_enough')->checkbox() ?>
+            </div>
+            <div class="col-md-6">
+                <?= $form->field($ratingModel, 'is_competent_enough')->checkbox() ?>
+            </div>
+        </div>
 
         <?= $form->field($ratingModel, 'comment')->textarea() ?>
 		
@@ -193,6 +205,15 @@ function iin(iin)
     }
     return [(k == iin.substr(11, 1)), '<font color="red">Контрольный разряд ИИН неверный, должно быть ' + k + ', а стоит ' + iin.substr(11, 1) +'</font>'];    
 }
+
+$('#rating-value').change(function() {
+  let rating = parseInt($(this).val());
+  if (rating <= 3) {
+      $('#extra-questions-block').show('ease');
+  } else {
+      $('#extra-questions-block').hide('ease');
+  }
+});
 JS;
 
 $jsKeyboard =<<<JS

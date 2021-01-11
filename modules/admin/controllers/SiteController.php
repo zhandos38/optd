@@ -24,10 +24,22 @@ class SiteController extends Controller
         $ratingInProcessQty = Rating::find()->where(['status' => Rating::STATUS_IN_PROCESS])->count();
         $ratingFinishedQty = Rating::find()->where(['status' => Rating::STATUS_FINISHED])->count();
 
+        $ratingBad = Rating::find()->andWhere(['<=', 'value', 3])->count();
+        $ratingGood = Rating::find()->andWhere(['>', 'value', 3])->count();
+
+        $ratingInform = Rating::find()->andWhere(['is_inform_good' => true])->count();
+        $ratingPolite = Rating::find()->andWhere(['is_polite_enough' => true])->count();
+        $ratingCompetent = Rating::find()->andWhere(['is_competent_enough' => true])->count();
+
         return $this->render('index', [
             'ratingUnsolvedQty' => $ratingUnsolvedQty,
             'ratingInProcessQty' => $ratingInProcessQty,
-            'ratingFinishedQty' => $ratingFinishedQty
+            'ratingFinishedQty' => $ratingFinishedQty,
+            'ratingBad' => $ratingBad,
+            'ratingGood' => $ratingGood,
+            'ratingInform' => $ratingInform,
+            'ratingPolite' => $ratingPolite,
+            'ratingCompetent' => $ratingCompetent
         ]);
     }
 }

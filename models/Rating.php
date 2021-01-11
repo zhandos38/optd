@@ -14,6 +14,9 @@ use yii\helpers\ArrayHelper;
  * @property string|null $comment
  * @property string|null $iin
  * @property int $status
+ * @property int $is_inform_good
+ * @property int $is_polite_enough
+ * @property int $is_competent_enough
  * @property int|null $created_at
  * @property int|null $updated_at
  *
@@ -53,7 +56,9 @@ class Rating extends \yii\db\ActiveRecord
             [['comment', 'customer_name'], 'string'],
             [['iin'], 'string', 'max' => 255],
             [['employee_id'], 'exist', 'skipOnError' => true, 'targetClass' => Employee::className(), 'targetAttribute' => ['employee_id' => 'id']],
-            ['value', 'required']
+            ['value', 'required'],
+
+            [['is_inform_good', 'is_polite_enough', 'is_competent_enough'], 'boolean']
         ];
     }
 
@@ -71,7 +76,10 @@ class Rating extends \yii\db\ActiveRecord
             'created_at' => 'Время создание',
             'updated_at' => 'Время обновление',
             'customer_name' => Yii::t('site', 'Ф.И.О пациента'),
-            'status' => 'Статус'
+            'status' => 'Статус',
+            'is_inform_good' => Yii::t('site', 'Вас недостаточно проинформировали?'),
+            'is_polite_enough' => Yii::t('site', 'Врач/медсестра был недостаточно вежливым?'),
+            'is_competent_enough' => Yii::t('site', 'Врач/медсестра оказался недостаточно компетентным?'),
         ];
     }
 
