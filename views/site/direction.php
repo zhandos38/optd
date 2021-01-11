@@ -8,5 +8,20 @@
             </a>
         </div>
     </div>
-    <img class="direction-img" src="/img/sctructure.jpg">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="/img/director.png" alt="director">
+            </div>
+            <div class="col-md-4">
+                <img class="w-100" src="/img/zam1.jpg" alt="zam1">
+            </div>
+            <div class="col-md-4">
+                <img src="/img/zam2.jpg" alt="zam2">
+            </div>
+            <div class="col-md-4">
+                <img src="/img/zam2.jpg" alt="zam3">
+            </div>
+        </div>
+    </div>
 </div>

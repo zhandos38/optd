@@ -46,14 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => ArrayHelper::map(Department::find()->asArray()->all(), 'id', 'name')
             ],
             'cabinet',
-            [
-                'attribute' => 'created_at',
-                'value' => function(Employee $model) {
-                    return date('d-m-Y H:i', $model->created_at);
-                },
-                'filter' => false
-            ],
-            //'updated_at',
 
             [
                 'class' => 'yii\grid\ActionColumn',
