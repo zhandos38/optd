@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
     <?php if (Yii::$app->language === 'ru'): ?>
     <h1>
-        ГКП на ПХВ "Городская поликлиника №3"
+        ГКП НА ПХВ "ГОРОДСКОЙ ОНКОЛОГИЧЕСКИЙ ЦЕНТР"
     </h1>
 
     <p class="text-center">
@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <p id="u7418-74">Веб сайт, Instagram, Facebook, обновления ежедневно.</p>
     <?php else: ?>
         <h1>
-            ШЖҚ МҚК  "Қалалық емхана №3"
+            ШЖҚ «ҚАЛАЛЫҚ ОНКОЛОГИЯЛЫҚ ОРТАЛЫҚ» МКК
         </h1>
 
         <p class="text-center">
