@@ -56,9 +56,11 @@ class Employee extends \yii\db\ActiveRecord
     {
         return [
             [['position_id', 'department_id', 'created_at', 'updated_at'], 'integer'],
-            [['full_name', 'cabinet', 'image', 'description'], 'string', 'max' => 255],
+            [['full_name', 'cabinet', 'image'], 'string', 'max' => 255],
             [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'], 'string'],
-            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg']
+            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
+
+            ['description', 'string']
         ];
     }
 
