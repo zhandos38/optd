@@ -15,6 +15,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'name_kz')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'is_duty')->checkbox() ?>
 
     <?= $form->field($model, 'is_staff')->checkbox() ?>

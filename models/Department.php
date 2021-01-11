@@ -10,6 +10,7 @@ use yii\helpers\ArrayHelper;
  *
  * @property int $id
  * @property string $name
+ * @property string $name_kz
  * @property boolean $is_duty
  * @property int $order
  * @property int $parent_id
@@ -32,7 +33,7 @@ class Department extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'string', 'max' => 255],
+            [['name', 'name_kz'], 'string', 'max' => 255],
             ['schedule', 'string'],
             [['is_duty', 'is_staff', 'order', 'parent_id'], 'integer']
         ];
@@ -45,6 +46,7 @@ class Department extends \yii\db\ActiveRecord
     {
         return [
             'name' => 'Имя',
+            'name_kz' => 'Имя (KZ)',
             'is_duty' => 'Показовать расписание',
             'is_staff' => 'Показовать в списке врачей',
             'schedule' => 'Расписание',
