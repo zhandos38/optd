@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'department_id',
                 'value' => function(Employee $model) {
-                    return $model->department->name;
+                    return !empty($model->department) ? $model->department->name : 'Не указано';
                 },
                 'filter' => ArrayHelper::map(Department::find()->asArray()->all(), 'id', 'name')
             ],
