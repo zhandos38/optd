@@ -441,12 +441,20 @@ a.desc:after {
     height: 82px;
 }
 
+.director-img {
+    width: 30%;
+}
+
 @media screen and (max-width: 1200px) {
     .header__name {
         font-size: 18px;
     }
 }
 @media screen and (max-width: 768px) {
+    .director-img {
+        width: 100%;
+    }
+
     .container {
         padding: 24px 15px 20px !important;
     }

@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card text-center">
-                    <img class="card-img-top" style="width: 30%" src="/img/director.png" alt="Card image cap">
+                    <img class="card-img-top director-img" src="/img/director.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Мауленов Жаксылык Оразбайулы
