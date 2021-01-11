@@ -71,7 +71,7 @@ $this->title = 'Главная старница';
     <div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['site/location']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
-                <?= Yii::t('site', 'Список больниц') ?>
+                <?= Yii::t('site', 'Список медицинских учреждений') ?>
             </div>
         </a>
     </div>
