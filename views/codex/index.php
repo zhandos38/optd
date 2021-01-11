@@ -1,7 +1,5 @@
 <?php
-
 use yii\helpers\Url;
-
 ?>
 <div class="buttons-group">
     <div class="back-button__wrapper">
@@ -12,31 +10,6 @@ use yii\helpers\Url;
         </a>
     </div>
 </div>
-<div class="main-menu__item-wrapper">
-    <a href="<?= Url::to(['codex/crime']) ?>" class="main-menu__item-link">
-        <div class="main-menu__item">
-            <?= Yii::t('site', 'Уголовный Кодекс РК') ?>
-        </div>
-    </a>
-</div>
-<div class="main-menu__item-wrapper">
-    <a href="<?= Url::to(['codex/citizen']) ?>" class="main-menu__item-link">
-        <div class="main-menu__item">
-            <?= Yii::t('site', 'Гражданский кодекс РК') ?>
-        </div>
-    </a>
-</div>
-<div class="main-menu__item-wrapper">
-    <a href="<?= Url::to(['codex/marriage']) ?>" class="main-menu__item-link">
-        <div class="main-menu__item">
-            <?= Yii::t('site', 'Кодекс "О браке (супружестве) и семье"') ?>
-        </div>
-    </a>
-</div>
-<div class="main-menu__item-wrapper">
-    <a href="<?= Url::to(['codex/finance']) ?>" class="main-menu__item-link">
-        <div class="main-menu__item">
-            <?= Yii::t('site', 'Бюджетный кодекс РК') ?>
-        </div>
-    </a>
+<div class="codex-view">
+    <iframe src="/file/v1500011304.27-09-2019.rus.pdf" width="100%" height="1600"></iframe>
 </div>
