@@ -27,7 +27,7 @@
         <div class="row" style="padding-top: 40px;">
             <div class="col-md-4">
                 <div class="card" style="text-align: center">
-                    <img class="card-img-top" style="width: 80%" src="/img/zam1.png" alt="Card image cap">
+                    <img class="card-img-top director-img" src="/img/zam1.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Жұмағали Дәулетбек Жұманұлы
@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card" style="text-align: center">
-                    <img class="card-img-top" style="width: 80%" src="/img/zam2.png" alt="Card image cap">
+                    <img class="card-img-top director-img" src="/img/zam2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Рахманов Динмухамед Абдикаимович
@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card" style="text-align: center">
-                    <img class="card-img-top" style="width: 80%" src="/img/zam3.png" alt="Card image cap">
+                    <img class="card-img-top director-img" src="/img/zam3.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Исмаилов Самат Тастемирович

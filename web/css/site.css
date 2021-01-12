@@ -115,9 +115,8 @@ a.desc:after {
 
 /* Header */
 .header {
-    height: 136px;
     background-color: #337ab7;
-    padding-top: 20px;
+    padding: 20px 0;
 }
 .header__symbol {
     width: 100px;
@@ -498,16 +497,9 @@ a.desc:after {
 }
 @media screen and (max-width: 768px) {
     .director-img {
-        width: 100%;
+        width: 50%;
     }
 
-    .container {
-        padding: 24px 15px 20px !important;
-    }
-    .header {
-        height: 166px;
-        padding-top: 0;
-    }
     .header__name {
         font-size: 12px;
     }
@@ -527,8 +519,7 @@ a.desc:after {
     .go-home-button, .back-button {
         font-size: 14px;
     }
-    .footer {
-        height: 0;
-        color: #fff;
+    .studio-text {
+        float: left !important;
     }
 }
