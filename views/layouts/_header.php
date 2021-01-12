@@ -23,6 +23,11 @@
         </div>
     </div>
 </header>
+<div class="instagram-box">
+    <button onclick="window.location.href='https://www.instagram.com/bibarystuimebek/'" type="button" id="whats-openPopup" class="instagram-button">
+        <img class="icon-instagram" src="img/instagram.svg">
+    </button>
+</div>
 <div class="chat-box">
     <button onclick="window.location.href='https://wa.me/77015005959'" type="button" id="whats-openPopup" class="whatsapp-button">
         <img class="icon-whatsapp" src="https://image.flaticon.com/icons/svg/134/134937.svg">

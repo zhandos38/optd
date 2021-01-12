@@ -404,7 +404,7 @@ a.desc:after {
     text-transform: capitalize;
 }
 
-.chat-box {
+.chat-box, .instagram-box {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -418,7 +418,10 @@ a.desc:after {
     padding: 5px;
     margin: 0;
 }
-.whatsapp-button {
+.instagram-box {
+    bottom: 200px;
+}
+.whatsapp-button, .instagram-button {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -438,6 +441,15 @@ a.desc:after {
 .icon-whatsapp {
     width: 82px;
     height: 82px;
+}
+
+.instagram-button {
+    box-shadow: unset;
+    background-color: unset;
+}
+.icon-instagram {
+    width: 86px;
+    height: 86px;
 }
 
 .director-img {
@@ -533,9 +545,17 @@ a.desc:after {
         width: 60px;
         height: 60px;
     }
+    .instagram-button {
+        width: 66px;
+        height: 66px;
+    }
     .icon-whatsapp {
         width: 50px;
         height: 46px;
+    }
+    .icon-instagram {
+        width: 60px;
+        height: 52px;
     }
 
     .employee-card__position {
@@ -565,5 +585,9 @@ a.desc:after {
     }
     #map {
         height: 200px;
+    }
+
+    .instagram-box {
+        bottom: 160px;
     }
 }
