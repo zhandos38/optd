@@ -18,7 +18,10 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="site-location">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-8 col-xs-12">
+            <div id="map"></div>
+        </div>
+        <div class="col-md-4 col-xs-12">
             <div class="map-list-wrapper">
                 <div class="map-list list-group">
                     <?php foreach ($marks as $mark): ?>
@@ -27,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <?= $mark['properties']['name'] ?>
                             </div>
                             <div class="map-item__address">
-                                <i class="fa fa-map-marker-alt"></i> <b>Адрес:</b> <?= $mark['properties']['address'] ?>
+                                <i class="fa fa-map-marker"></i> <b>Адрес:</b> <?= $mark['properties']['address'] ?>
                             </div>
                             <div class="map-item__working-hours">
                                 <i class="fa fa-clock"></i> <b>Время работы:</b> <?= $mark['properties']['workingHours'] ?>
@@ -39,9 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php endforeach; ?>
                 </div>
             </div>
-        </div>
-        <div class="col-md-8">
-            <div id="map" style="width: 100%; height: 600px"></div>
         </div>
     </div>
 </div>

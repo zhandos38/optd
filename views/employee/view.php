@@ -33,7 +33,7 @@ $this->title = 'График врача';
     </div>
     <div class="employee-card__info-wrapper">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-6">
                 <img src="/img/employee/<?= $model->image ?>" alt="<?= $model->image ?>" class="employee-card__image">
             </div>
             <div class="col-md-8">
