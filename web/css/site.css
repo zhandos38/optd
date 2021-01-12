@@ -443,6 +443,9 @@ a.desc:after {
 .director-img {
     width: 30%;
 }
+.zam-img {
+    width: 60%;
+}
 
 .icon-bar {
     position: fixed;
@@ -497,6 +500,9 @@ a.desc:after {
 }
 @media screen and (max-width: 768px) {
     .director-img {
+        width: 50%;
+    }
+    .zam-img {
         width: 50%;
     }
 
