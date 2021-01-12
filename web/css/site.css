@@ -538,6 +538,10 @@ a.desc:after {
         height: 46px;
     }
 
+    .employee-card__full-name {
+        font-size: 22px;
+    }
+
     .wrap > .container {
         padding: 26px 20px 70px;
     }
