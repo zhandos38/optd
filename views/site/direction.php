@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card text-center">
-                    <img class="card-img-top director-img" src="/img/director.png" alt="Card image cap">
+                    <img id="direction-img-trigger" class="card-img-top director-img" src="/img/director.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Мауленов Жаксылык Оразбайулы
@@ -20,6 +20,10 @@
                         <p class="card-text">
                             <?= Yii::t('site', 'Директор городского онкологического центра') ?>
                         </p>
+                        <div id="direction-working-hours" style="display: none; text-align: center">
+                            <?= Yii::t('site', 'Приемные дни с личными вопросами к директору') ?> <br>
+                            <?= Yii::t('site', 'Вторник') ?>: 15:00-17:00
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,3 +71,12 @@
         </div>
     </div>
 </div>
+<?php
+$js =<<<JS
+$('#direction-img-trigger').click(function () {
+    $('#direction-working-hours').toggle('ease');
+});
+JS;
+
+$this->registerJs($js);
+?>

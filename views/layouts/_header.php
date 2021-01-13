@@ -24,8 +24,8 @@
     </div>
 </header>
 <div class="instagram-box">
-    <button onclick="window.location.href='https://www.instagram.com/bibarystuimebek/'" type="button" id="whats-openPopup" class="instagram-button">
-        <img class="icon-instagram" src="img/instagram.svg">
+    <button onclick="window.location.href='https://www.instagram.com/gocshymkent/'" type="button" id="whats-openPopup" class="instagram-button">
+        <img class="icon-instagram" src="/img/instagram.svg">
     </button>
 </div>
 <div class="chat-box">
