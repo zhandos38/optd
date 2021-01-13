@@ -414,7 +414,7 @@ a.desc:after {
     position: fixed;
     z-index: 999999999999999;
     bottom: 80px;
-    right: 20px;
+    right: 0;
     padding: 5px;
     margin: 0;
 }
@@ -542,20 +542,20 @@ a.desc:after {
     }
 
     .whatsapp-button {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     .instagram-button {
-        width: 66px;
+        width: 55px;
         height: 66px;
     }
     .icon-whatsapp {
-        width: 50px;
-        height: 46px;
+        width: 37px;
+        height: 37px;
     }
     .icon-instagram {
-        width: 60px;
-        height: 52px;
+        width: 44px;
+        height: 44px;
     }
 
     .employee-card__position {
@@ -588,6 +588,6 @@ a.desc:after {
     }
 
     .instagram-box {
-        bottom: 160px;
+        bottom: 135px;
     }
 }
