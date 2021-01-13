@@ -505,6 +505,10 @@ a.desc:after {
     font-size: 30px;
 }
 
+.content-wrapper > .content {
+    font-size: inherit;
+}
+
 @media screen and (max-width: 1200px) {
     .header__name {
         font-size: 18px;
