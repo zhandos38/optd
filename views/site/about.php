@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </h1>
 
     <p class="text-center">
-        <img src="/img/building.jpg" alt="building">
+        <img src="/img/building.jpg" alt="building" style="width: 100%;">
     </p>
 
     <p>
@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </h1>
 
         <p class="text-center">
-            <img src="/img/building.jpg" alt="building">
+            <img src="/img/building.jpg" alt="building" style="width: 100%;">
         </p>
 
         <p id="u2474-7"><span id="u2474-6">Қалалық онкологиялық орталық 16.03.1945 жылы Онтүстік Қазакстан Денсаулық сақтау басқармасының&nbsp; №31&nbsp; бұйрығына сәйкес онкологиялық бекет болып ашылған, оған 1-ші қалалық емхананың меңгерушісі Теплицкая Любовь Семеновна тағайындалды.1946 ж бастап 1950 жж онкологиялық бөлімшесінде&nbsp; меңгерушілер:&nbsp; Башратян И.П.&nbsp; және&nbsp; Ценнер Х.Х болған.</span></p>
