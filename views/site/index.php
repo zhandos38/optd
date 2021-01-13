@@ -27,6 +27,20 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
+        <a href="<?= \yii\helpers\Url::to(['site/dau-med']) ?>" class="main-menu__item-link">
+            <div class="main-menu__item">
+                <?= Yii::t('site', 'КМИС') ?>
+            </div>
+        </a>
+    </div>
+    <div class="main-menu__item-wrapper">
+        <a href="<?= \yii\helpers\Url::to(['site/request']) ?>" class="main-menu__item-link">
+            <div class="main-menu__item">
+                <?= Yii::t('site', 'Онлайн запись на прием к директору') ?>
+            </div>
+        </a>
+    </div>
+    <div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['codex/index']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'Нормативно-правовые акты') ?>
@@ -65,20 +79,6 @@ $this->title = 'Главная старница';
         <a href="<?= \yii\helpers\Url::to(['site/location']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'Список медицинских учреждений') ?>
-            </div>
-        </a>
-    </div>
-    <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/dau-med']) ?>" class="main-menu__item-link">
-            <div class="main-menu__item">
-                <?= Yii::t('site', 'КМИС') ?>
-            </div>
-        </a>
-    </div>
-    <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/request']) ?>" class="main-menu__item-link">
-            <div class="main-menu__item">
-                <?= Yii::t('site', 'Онлайн запись на прием к директору') ?>
             </div>
         </a>
     </div>

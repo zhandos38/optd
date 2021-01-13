@@ -8,5 +8,5 @@
     </div>
 </div>
 <div class="codex-view">
-    <iframe src="https://krg.dmed.kz/Authentication/Authentication/SignIn" width="100%" height="1600"></iframe>
+    <iframe src="https://lkp-shy.dmed.kz/" width="100%" height="1600"></iframe>
 </div>
