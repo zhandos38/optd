@@ -11,8 +11,8 @@
     <div>
         <div class="row">
             <div class="col-md-12">
-                <div class="card text-center">
-                    <img id="direction-img-trigger" class="card-img-top director-img" src="/img/director.png" alt="Card image cap">
+                <div class="card text-center direction-img-trigger">
+                    <img class="card-img-top director-img" src="/img/director.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
                             Мауленов Жаксылык Оразбайулы
@@ -20,7 +20,7 @@
                         <p class="card-text">
                             <?= Yii::t('site', 'Директор городского онкологического центра') ?>
                         </p>
-                        <div id="direction-working-hours" style="display: none; text-align: center">
+                        <div class="direction-working-hours" style="display: none; text-align: center">
                             <?= Yii::t('site', 'Приемные дни с личными вопросами к директору') ?> <br>
                             <?= Yii::t('site', 'Вторник') ?>: 15:00-17:00
                         </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="row" style="padding-top: 40px;">
             <div class="col-md-4">
-                <div class="card" style="text-align: center">
+                <div class="card direction-img-trigger" style="text-align: center">
                     <img class="card-img-top zam-img" src="/img/zam1.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -39,11 +39,14 @@
                         <p class="card-text">
                             <?= Yii::t('site', 'Заместитель директора по организационно-методической работе') ?>
                         </p>
+                        <div class="direction-working-hours" style="display: none; text-align: center">
+                            <?= Yii::t('site', 'Приемные дни') ?>:  <?= Yii::t('site', 'Каждый день') ?>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card" style="text-align: center">
+                <div class="card direction-img-trigger" style="text-align: center">
                     <img class="card-img-top zam-img" src="/img/zam2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -52,11 +55,14 @@
                         <p class="card-text">
                             <?= Yii::t('site', 'Заместитель директора по качеству') ?>
                         </p>
+                        <div class="direction-working-hours" style="display: none; text-align: center">
+                            <?= Yii::t('site', 'Приемные дни') ?>:  <?= Yii::t('site', 'Каждый день') ?>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card" style="text-align: center">
+                <div class="card direction-img-trigger" style="text-align: center">
                     <img class="card-img-top zam-img" src="/img/zam3.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -65,6 +71,9 @@
                         <p class="card-text">
                             <?= Yii::t('site', 'Заместитель директора по лечебной части') ?>
                         </p>
+                        <div class="direction-working-hours" style="display: none; text-align: center">
+                            <?= Yii::t('site', 'Приемные дни') ?>:  <?= Yii::t('site', 'Каждый день') ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,8 +82,8 @@
 </div>
 <?php
 $js =<<<JS
-$('#direction-img-trigger').click(function () {
-    $('#direction-working-hours').toggle('ease');
+$('.direction-img-trigger').click(function () {
+    $(this).find('.direction-working-hours').toggle('ease');
 });
 JS;
 

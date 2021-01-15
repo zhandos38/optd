@@ -27,7 +27,7 @@ $this->title = 'Главная старница';
         </a>
     </div>
     <div class="main-menu__item-wrapper">
-        <a href="<?= \yii\helpers\Url::to(['site/dau-med']) ?>" class="main-menu__item-link">
+        <a href="https://lkp-shy.dmed.kz/" class="main-menu__item-link">
             <div class="main-menu__item">
                 <?= Yii::t('site', 'КМИС') ?>
             </div>
