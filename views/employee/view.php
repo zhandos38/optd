@@ -52,7 +52,7 @@ $this->title = 'График врача';
                             <table class="table table-responsive">
                                 <thead>
                                 <tr>
-                                    <th><?= Yii::t('site', 'Понидельник') ?></th>
+                                    <th><?= Yii::t('site', 'Понедельник') ?></th>
                                     <th><?= Yii::t('site', 'Вторник') ?></th>
                                     <th><?= Yii::t('site', 'Среда') ?></th>
                                     <th><?= Yii::t('site', 'Четверг') ?></th>
@@ -75,7 +75,7 @@ $this->title = 'График врача';
                             </table>
                         <?php else: ?>
                             <ul>
-                                <li><?= Yii::t('site', 'Понидельник') ?>: <?= $model->monday ? $model->monday : 'Не указано' ?></li>
+                                <li><?= Yii::t('site', 'Понедельник') ?>: <?= $model->monday ? $model->monday : 'Не указано' ?></li>
                                 <li><?= Yii::t('site', 'Вторник') ?>: <?= $model->tuesday ? $model->tuesday : 'Не указано' ?></li>
                                 <li><?= Yii::t('site', 'Среда') ?>: <?= $model->wednesday ? $model->wednesday : 'Не указано' ?></li>
                                 <li><?= Yii::t('site', 'Четверг') ?>: <?= $model->thursday ? $model->thursday : 'Не указано' ?></li>

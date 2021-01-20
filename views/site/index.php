@@ -15,7 +15,7 @@ $this->title = 'Главная старница';
     <div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['employee/index']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
-                <?= Yii::t('site', 'Врачи поликлинки') ?>
+                <?= Yii::t('site', 'Врачи поликлиники') ?>
             </div>
         </a>
     </div>
@@ -50,7 +50,7 @@ $this->title = 'Главная старница';
     <div class="main-menu__item-wrapper">
         <a href="<?= \yii\helpers\Url::to(['site/insurance']) ?>" class="main-menu__item-link">
             <div class="main-menu__item">
-                <?= Yii::t('site', 'Бесплатные лекартсвенное обеспечение') ?>
+                <?= Yii::t('site', 'Бесплатное лекартсвенное обеспечение') ?>
             </div>
         </a>
     </div>
